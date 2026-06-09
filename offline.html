@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Offline · The four games · Connect.</title>
+<meta name="description" content="When the network drops, Connect opens a small room. Four games for one player, two players, or a room full of friends sharing a phone." />
+<meta name="theme-color" content="#050505" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+<canvas class="grid-bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="features.html">Features</a>
+      <a href="tide.html">Tide</a>
+      <a href="offline.html" class="active">Offline</a>
+      <a href="pro.html">Pro</a>
+      <a href="manifesto.html">Manifesto</a>
+    </nav>
+    <button class="nav-menu-btn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <div class="hero-eyebrow">
+      <span><span class="live-dot"></span>Hub · Net · Tide · Spin · Faker</span>
+      <span>On-device, no servers</span>
+    </div>
+    <h1>
+      <span class="reveal-line"><span><span class="italic">When the network</span></span></span>
+      <span class="reveal-line delay-1"><span><span class="italic">drops,</span> <span class="roman-thin">a small</span></span></span>
+      <span class="reveal-line delay-2"><span><span class="italic">room opens.</span></span></span>
+    </h1>
+    <div class="hero-sub">
+      <p class="lead">Most apps show a sad cloud. Connect opens a hub. Four games take over: one to mend, one to breathe, two for a room full of friends sharing a phone.</p>
+      <div class="meta">
+        <p>The connectivity probe runs a four-second DNS check. If it fails, the hub appears. When the network is back, a quiet line fades in along the bottom. Tap it to return.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <div class="four reveal">
+      <div class="four-item">
+        <div class="ord"><span>i.</span><span>One player</span></div>
+        <h3><span class="italic">Net.</span></h3>
+        <p class="desc">Rotate to mend the network. An endless brain puzzle on a procedural grid, rooted in the Connect mark. Wider, twistier with every level.</p>
+        <canvas id="net-canvas" class="mark" style="width:200px;height:200px;margin-top:24px;" aria-hidden="true"></canvas>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>ii.</span><span>One player</span></div>
+        <h3><span class="italic">Tide.</span></h3>
+        <p class="desc">Breathe with a stranger. The resonance pacer, lifted out of the app into its own room. Five seconds in, five seconds out.</p>
+        <a class="btn" href="tide.html" style="margin-top:24px;">Open Tide</a>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>iii.</span><span>2 to 10 in one room</span></div>
+        <h3><span class="italic">Spin.</span></h3>
+        <p class="desc">An editorial truth-or-dare. A circular dial of names, a hairline pointer at the top. Spin gives the wheel a five-to-seven second easeOutQuart deceleration. Each new slice ratchets under your thumb like a casino wheel.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>iv.</span><span>4 to 10 in one room</span></div>
+        <h3><span class="italic">Faker.</span></h3>
+        <p class="desc">A drawing imposter game. One player is secretly the faker. Everyone else gets the same word. The phone passes around: each player adds a single line. After the last line, the group talks it out and votes. If the faker is caught, they get one shot to guess the word and steal the win.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">01.</div>
+      <div>
+        <h2><span class="italic">The visual language</span> matches across the hub.</h2>
+        <p class="sec-lead">Pure black canvas. A breathing dot-grid in the back. Playfair italic for the titles. Hairline strokes for the dividers. Editorial eyebrow labels and primary link buttons. No banners, no row chrome.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Hierarchy by type</span>
+        <h3>Typography does the work.</h3>
+        <p>The page is the container. A small Connect wordmark sits as a brand mark at the top. A short Playfair italic sets the mood. The games are typographic entries: ordinal, name in italic, description in italic, separated by hairlines.</p>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">No accounts, no servers</span>
+        <h3>Everything runs on-device.</h3>
+        <p>The hub doesn't talk to a backend. Net's grid is procedurally generated. Spin and Faker pass the phone, so the social state stays in the room. Tide is a local animation loop with a haptic on each phase.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">02.</div>
+      <div>
+        <h2><span class="italic">Net</span> is the front door.</h2>
+        <p class="sec-lead">The grid hosts a procedurally generated network rooted at the centre tile, the Connect mark. Tiles start randomly rotated, so the network is broken. Tap to rotate ninety degrees.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Solve condition</span>
+        <h3>Every stub joined, every tile reachable.</h3>
+        <p>Connected tiles glow white. Disconnected tiles sit at twenty-eight percent. The source carries an inscribed Connect node and a slow halo breath. Solving advances to the next level: a wider grid, slightly twistier topology.</p>
+        <div class="pull">Endless. No fail. Best level persists locally.</div>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">Solve animation</span>
+        <h3>A luminous wave radiates outward.</h3>
+        <p>On solve, a wave fires from the source through the network in BFS order, then the next puzzle fades in. The brand and the mechanic are the same idea: things in their right place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">03.</div>
+      <div>
+        <h2><span class="italic">Spin</span> is the room game.</h2>
+        <p class="sec-lead">Names typed by the user during setup. Empty fields fall back to the editorial ordinal ("01", "02") so the wheel never has empty slices.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Two spins, then a prompt</span>
+        <h3>The wheel chooses, twice.</h3>
+        <p>One spin picks the asker. A second spin picks the answerer, biased away from the asker. The answerer taps Truth or Dare. The phone serves a prompt.</p>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">The wheel is the object</span>
+        <h3>Not an arrow on a slice.</h3>
+        <p>The dial is the moving part. A small hairline pointer notches into the top. Long, weighted deceleration on an easeOutQuart curve, five to seven seconds of suspense. Every new slice under the pointer fires a soft haptic ratchet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">04.</div>
+      <div>
+        <h2><span class="italic">Faker</span> is the drawing game.</h2>
+        <p class="sec-lead">For four to ten friends sharing one phone. One of you knows nothing.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Phases</span>
+        <h3>Setup, rules, assign, pass, draw, discuss, vote, tally, guess.</h3>
+        <p>The phone passes around the room. Each player gets the same word, except one. Two lines each on a shared canvas. After the last line, the group talks it out and votes on who's faking.</p>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">The faker's chance</span>
+        <h3>One shot to steal the win.</h3>
+        <p>If the faker is caught, they get a single guess at the word. Guess right and they win. Slip through the vote and they win outright.</p>
+        <div class="pull">A party game that runs on attention, not signal.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto wrap hair-top reveal">
+    <p>
+      <span class="mute">When connectivity falls away</span><br>
+      something better should be waiting.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-col-brand">
+        <p class="foot-brand">Connect<span class="dot">.</span></p>
+        <p style="color:var(--ink-mute);font-size:14px;margin-top:18px;max-width:340px;">A small social app, made on purpose.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="tide.html">Tide</a>
+        <a href="offline.html">Offline</a>
+        <a href="pro.html">Pro</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Connect.</span>
+      <span>Built by Mahdi · Paris</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

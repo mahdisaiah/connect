@@ -1,52 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About &middot; Connect</title>
-  <meta name="description" content="The why behind Connect and the person building it." />
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About · Connect.</title>
+<meta name="description" content="The story behind Connect, the person making it, and the stack it runs on." />
+<meta name="theme-color" content="#050505" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand"><span class="brand-dot"></span>Connect</a>
-      <div class="nav-links">
-        <a href="features.html">Features</a>
-        <a href="about.html" class="active">About</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </div>
+<canvas class="grid-bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="features.html">Features</a>
+      <a href="tide.html">Tide</a>
+      <a href="offline.html">Offline</a>
+      <a href="pro.html">Pro</a>
+      <a href="manifesto.html">Manifesto</a>
+    </nav>
+    <button class="nav-menu-btn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <div class="hero-eyebrow">
+      <span><span class="live-dot"></span>Solo project · Paris</span>
+      <span>Building since 2025</span>
     </div>
-  </nav>
-
-  <header class="hero container">
-    <h1>About Connect</h1>
-    <p class="lead">A small social app, made on purpose.</p>
-  </header>
-
-  <section>
-    <div class="container prose">
-      <h2>Why this exists</h2>
-      <p>Most social apps want your attention for as long as they can keep it. Connect is being built the other way around. The goal isn't time spent. It's whether you feel better, sharper, or more in touch after you close the app than you did when you opened it.</p>
-
-      <h2>How it's built</h2>
-      <p>Connect is a Flutter app with a Supabase backend, shipped on iOS and Android. Features land one at a time, and stay only if they belong. The features page lists what's in today.</p>
-
-      <h2>Who's making it</h2>
-      <p>Built by Mahdi. Solo project, no team, no roadmap deck. If you want to reach out, find me through the contact link in the app or on the GitHub repo.</p>
+    <h1>
+      <span class="reveal-line"><span><span class="italic">A small app,</span></span></span>
+      <span class="reveal-line delay-1"><span><span class="italic">made by</span> <span class="roman-thin">one person.</span></span></span>
+    </h1>
+    <div class="hero-sub">
+      <p class="lead">Connect is built by Mahdi, in Paris. No team, no roadmap deck, no funding round. One person, picking the next thing carefully.</p>
+      <div class="meta">
+        <p>The app started as a fresh rebuild of an earlier prototype. The clean codebase, the editorial voice, and the offline hub were all carried over from that effort.</p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container foot-row">
-      <div>&copy; 2026 Connect</div>
-      <div class="foot-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="features.html">Features</a>
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">01.</div>
+      <div>
+        <h2><span class="italic">Why</span> it exists.</h2>
+        <p class="sec-lead">Most social apps are built around what makes their numbers go up. Connect is built around what someone would actually want to come back to.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">A small refusal</span>
+        <h3>To do social differently.</h3>
+        <p>The mainstream social apps are very good at one thing: holding attention as long as possible. They got there by removing friction, blurring time, and treating every interaction as a metric. The product of that is a feed that doesn't end, and a vague feeling that it cost something.</p>
+        <p>Connect refuses some of those moves on purpose. Stories fade. Refresh reorders. The feed surfaces interest-matched questions, not whatever is loudest. Tide gives back a moment of attention instead of taking one.</p>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">A long bet</span>
+        <h3>That fewer, better surfaces win.</h3>
+        <p>The bet is that a social app that respects time, makes its boundaries explicit, and gives you something useful when it can't connect, is the kind of thing you keep installed for years instead of months.</p>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">02.</div>
+      <div>
+        <h2><span class="italic">How</span> it's built.</h2>
+        <p class="sec-lead">A Flutter app on iOS and Android. Supabase for auth, storage, database, and realtime. Hosted in the EU.</p>
+      </div>
+    </header>
+
+    <div class="four reveal">
+      <div class="four-item">
+        <div class="ord"><span>Client</span><span>Cross-platform</span></div>
+        <h3><span class="italic">Flutter.</span></h3>
+        <p class="desc">A single codebase ships to iOS and Android. Custom paint for Tide, Net, Spin, and Faker. WebRTC for live audio. Google Fonts on the editorial surfaces.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>Backend</span><span>Managed</span></div>
+        <h3><span class="italic">Supabase.</span></h3>
+        <p class="desc">Auth, Postgres, storage, realtime. Row-level security gates every read and write. Hosted in the EU on European servers.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>AI</span><span>Tagging</span></div>
+        <h3><span class="italic">Groq.</span></h3>
+        <p class="desc">A Groq agent on llama-3.3-70b writes the debate tags. A separate post agent powers the adaptive quizzes. Both use strict sanitisers on output.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>Ads</span><span>Free tier</span></div>
+        <h3><span class="italic">AdMob</span> + in-house.</h3>
+        <p class="desc">Native, interstitial, and app-open formats through google_mobile_ads. A small Supabase-backed in-house system covers community causes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">03.</div>
+      <div>
+        <h2><span class="italic">Who</span> is making it.</h2>
+        <p class="sec-lead">Mahdi. Based in Paris. Builds because the thing wasn't there.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Background</span>
+        <h3>Engineer by training, designer by patience.</h3>
+        <p>The first version of this app shipped in 2025. The current rebuild started fresh, with everything that survived from the prototype getting a second look. What's here now is what was worth keeping, and a few things added since.</p>
+        <p>If you want to reach out, the contact link inside the app is the easiest route.</p>
+      </div>
+      <div class="feature-text reveal" data-delay="1">
+        <span class="ordinal">Stance</span>
+        <h3>Independence, while it lasts.</h3>
+        <p>Connect is independent and self-funded. Free for everyone, with an optional Pro tier that lets people who want to support the work do that. No investors, no growth team, no quarter to hit.</p>
+        <div class="pull">Built so it can stay this way.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto wrap hair-top reveal">
+    <p>
+      <span class="mute">A small social app,</span><br>
+      built one careful thing at a time.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-col-brand">
+        <p class="foot-brand">Connect<span class="dot">.</span></p>
+        <p style="color:var(--ink-mute);font-size:14px;margin-top:18px;max-width:340px;">A small social app, made on purpose.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="tide.html">Tide</a>
+        <a href="offline.html">Offline</a>
+        <a href="pro.html">Pro</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Connect.</span>
+      <span>Built by Mahdi · Paris</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

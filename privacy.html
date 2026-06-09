@@ -1,73 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy &middot; Connect</title>
-  <meta name="description" content="How Connect handles your data." />
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy · Connect.</title>
+<meta name="description" content="A plain-language summary of what Connect collects, where it lives, and what we refuse to do." />
+<meta name="theme-color" content="#050505" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand"><span class="brand-dot"></span>Connect</a>
-      <div class="nav-links">
-        <a href="features.html">Features</a>
-        <a href="about.html">About</a>
-        <a href="privacy.html" class="active">Privacy</a>
-        <a href="terms.html">Terms</a>
+<canvas class="grid-bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="features.html">Features</a>
+      <a href="tide.html">Tide</a>
+      <a href="offline.html">Offline</a>
+      <a href="pro.html">Pro</a>
+      <a href="manifesto.html">Manifesto</a>
+    </nav>
+    <button class="nav-menu-btn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main class="prose-page">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <h1><span class="italic">Privacy.</span></h1>
+      <div class="meta">
+        <span>Plain-language summary</span>
+        <span>Last updated 2026-06-09</span>
       </div>
-    </div>
-  </nav>
 
-  <header class="hero container">
-    <h1>Privacy</h1>
-    <p class="lead">A plain-language summary of what Connect collects and why.</p>
-  </header>
-
-  <section>
-    <div class="container prose">
       <span class="draft">Draft, replace before publishing</span>
 
-      <h2>What we collect</h2>
+      <h2>What we collect.</h2>
       <ul>
-        <li>Account info you give us: email, username, profile photo.</li>
-        <li>Content you create: posts, stories, debates, quiz answers, messages.</li>
-        <li>Basic usage data: device type, app version, crash reports.</li>
+        <li>Account info you give us. Email, username, optional profile photo.</li>
+        <li>Content you create. Stories, debates, replies, quiz answers, messages.</li>
+        <li>Basic technical data. Device type, app version, anonymised crash reports.</li>
       </ul>
 
-      <h2>What we don't do</h2>
+      <h2>What we refuse to do.</h2>
       <ul>
-        <li>We don't sell your data.</li>
-        <li>We don't share content with advertisers.</li>
-        <li>We don't track you across other apps or sites.</li>
+        <li>Sell your data. Not to advertisers, not to brokers, not for "research."</li>
+        <li>Share content with advertisers, ever.</li>
+        <li>Track you across other apps or websites.</li>
+        <li>Build a long-term behaviour profile for ad targeting.</li>
       </ul>
 
-      <h2>Where it lives</h2>
-      <p>Your data sits in Supabase, hosted in the EU. Auth, storage, and database access are gated by row-level security.</p>
+      <h2>Where it lives.</h2>
+      <p>Your data sits in Supabase, hosted in the EU on European servers. Auth, storage, and database access are gated by row-level security. The Connect engineer can technically query the database for operational reasons. We will never browse it for fun, and we will tell you if there's an incident that requires it.</p>
 
-      <h2>Ads</h2>
-      <p>Free accounts see ads through Google AdMob and through our own ad system. AdMob may use device identifiers as described in their policy. Pro accounts don't see ads at all.</p>
+      <h2>Ads.</h2>
+      <p>Free accounts see ads through Google AdMob (native, interstitial, app-open) and through a small in-house ad system for community causes. AdMob may use device identifiers as described in their own policy. Pro accounts don't see ads at all.</p>
 
-      <h2>Your rights</h2>
-      <p>You can delete your account from inside the app. Deleting removes your profile, posts, stories, and messages. Some logs are retained for up to 30 days for safety and abuse review.</p>
+      <h2>Your rights.</h2>
+      <p>You can delete your account from inside the app. Deleting removes your profile, posts, stories, and messages. Some safety logs are retained for up to thirty days for abuse review. After that, they're gone too.</p>
+      <p>You can also export your content from the same settings screen. The export is a zipped folder of JSON and your uploaded media.</p>
 
-      <h2>Contact</h2>
+      <h2>Children.</h2>
+      <p>You must be at least thirteen, or the minimum age in your country, whichever is higher. If we learn an account belongs to a younger user, we'll remove it.</p>
+
+      <h2>Changes.</h2>
+      <p>Big changes to this policy will be announced in the app before they take effect. You can read the previous versions in the changelog at any time.</p>
+
+      <h2>Contact.</h2>
       <p>Questions about privacy go to <a href="mailto:hello@example.com">hello@example.com</a>.</p>
-
-      <p style="margin-top:32px;font-size:0.85rem;">Last updated: 2026-06-09.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <footer>
-    <div class="container foot-row">
-      <div>&copy; 2026 Connect</div>
-      <div class="foot-links">
-        <a href="terms.html">Terms</a>
-        <a href="about.html">About</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-col-brand">
+        <p class="foot-brand">Connect<span class="dot">.</span></p>
+        <p style="color:var(--ink-mute);font-size:14px;margin-top:18px;max-width:340px;">A small social app, made on purpose.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
         <a href="features.html">Features</a>
+        <a href="tide.html">Tide</a>
+        <a href="offline.html">Offline</a>
+        <a href="pro.html">Pro</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
       </div>
     </div>
-  </footer>
+    <div class="foot-bottom">
+      <span>© 2026 Connect.</span>
+      <span>Built by Mahdi · Paris</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

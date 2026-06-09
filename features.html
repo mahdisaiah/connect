@@ -1,73 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Features &middot; Connect</title>
-  <meta name="description" content="A walk through what's in Connect today: stories, debates, quizzes, the tide breathing screen, and more." />
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Features · Connect.</title>
+<meta name="description" content="A complete walk through what's in Connect today: stories, debates, the resonance pacer, the offline four, spotlight, quizzes, and more." />
+<meta name="theme-color" content="#050505" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand"><span class="brand-dot"></span>Connect</a>
-      <div class="nav-links">
-        <a href="features.html" class="active">Features</a>
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </div>
+<canvas class="grid-bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="features.html" class="active">Features</a>
+      <a href="tide.html">Tide</a>
+      <a href="offline.html">Offline</a>
+      <a href="pro.html">Pro</a>
+      <a href="manifesto.html">Manifesto</a>
+    </nav>
+    <button class="nav-menu-btn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <div class="hero-eyebrow">
+      <span><span class="live-dot"></span>Twelve features and counting</span>
+      <span>Updated June 2026</span>
     </div>
-  </nav>
-
-  <header class="hero container">
-    <h1>What's inside Connect</h1>
-    <p class="lead">A short tour of the parts that are working today. New things land when they're ready, not because there's a calendar.</p>
-  </header>
-
-  <section>
-    <div class="container">
-      <div class="feature-block">
-        <h3>Stories that fade</h3>
-        <p>Post a moment and it lives for 24 hours. Replies thread back to the story, and if someone reposts you, the original sticks around long enough for the conversation to make sense. After that, it's gone.</p>
-      </div>
-
-      <div class="feature-block">
-        <h3>Debates that matter</h3>
-        <p>Quick takes on real questions, tagged by topic and surfaced to people who care about them. The feed mixes in debates that match your interests, not just whatever was loudest today.</p>
-      </div>
-
-      <div class="feature-block">
-        <h3>Quizzes built from real content</h3>
-        <p>Short adaptive quizzes from channel shorts and shared links, three to five questions long. No padding, no trick questions, just a quick check on what stuck.</p>
-      </div>
-
-      <div class="feature-block">
-        <h3>Tide, a place to breathe</h3>
-        <p>Hold the screen, follow the rhythm, watch the partner shimmer in time. No accounts, no streaks, no leaderboard. Just a minute or two to come back to yourself.</p>
-      </div>
-
-      <div class="feature-block">
-        <h3>A feed that respects your time</h3>
-        <p>Refresh reorders what you've already seen instead of hiding it. The Refine card moves around so you actually notice it. Nothing pretends to be urgent.</p>
-      </div>
-
-      <div class="feature-block">
-        <h3>Pro, when you want it</h3>
-        <p>Ads support the free tier. Pro turns them off and unlocks the parts that need a bit more room. Same app either way.</p>
+    <h1>
+      <span class="reveal-line"><span><span class="italic">Everything inside.</span></span></span>
+      <span class="reveal-line delay-1"><span><span class="roman-thin">Made on purpose.</span></span></span>
+    </h1>
+    <div class="hero-sub">
+      <p class="lead">A complete walk through what Connect can do today. Each one earned its place by being kept around for more than a season.</p>
+      <div class="meta">
+        <p>This list grows when something is ready, not on a schedule. Older surfaces have been pruned out so what's here is honest.</p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container foot-row">
-      <div>&copy; 2026 Connect</div>
-      <div class="foot-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="about.html">About</a>
+  <!-- 01 Stories -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">01.</div>
+      <div>
+        <h2><span class="italic">Stories</span> that fade.</h2>
+        <p class="sec-lead">A moment, kept for twenty-four hours, then gone. Replies tie back to the story so the conversation never drifts.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Lifecycle</span>
+        <h3>Twenty-four hours. Then nothing.</h3>
+        <p>Each story has a hard expiry. There's a small grace period if someone reposts you, so the thread can finish making sense. Past the window, a chat reply that referenced the story says "Story not available."</p>
+        <div class="pull">No archive pressure. No dashboards to feed.</div>
+      </div>
+      <div class="reveal" data-delay="1">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+          <div class="phone-screen">
+            <div class="scr">
+              <div class="scr-eyebrow">Stories</div>
+              <div class="story-ring-row">
+                <div class="story-ring active"></div>
+                <div class="story-ring"></div>
+                <div class="story-ring"></div>
+                <div class="story-ring"></div>
+              </div>
+              <div class="story-card">
+                <div class="story-meta"><span>Mira · 7h ago</span><span>5 replies</span></div>
+                <p class="story-body">"Cooked something I've never tried, alone, and it was good."</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- 02 Debates -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">02.</div>
+      <div>
+        <h2><span class="italic">Debates</span> with a tag agent.</h2>
+        <p class="sec-lead">A small reasoning agent reads each post and writes three to five taxonomy slugs onto it. A sibling-topic graph fans the post out to adjacent interests.</p>
+      </div>
+    </header>
+    <div class="feature-row reverse">
+      <div class="feature-text reveal">
+        <span class="ordinal">Behind the feed</span>
+        <h3>The room finds the question.</h3>
+        <p>No hashtags to invent, no algorithm to game. The tagger uses the same taxonomy that powers your home interests. If your interest in "music" is close to "live performance," debates on either find you without spam.</p>
+        <p>Cast a side, see how the room leans, jump into the thread. Or just watch.</p>
+        <div class="pull">Built so good takes don't need to shout.</div>
+      </div>
+      <div class="reveal" data-delay="1">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+          <div class="phone-screen">
+            <div class="scr">
+              <div class="scr-eyebrow">For you · Debates</div>
+              <div class="debate-card">
+                <div class="debate-tags"><span class="tag">Music</span><span class="tag">Live</span></div>
+                <p class="debate-q">"Phones at concerts, yes or no?"</p>
+                <div class="debate-bar"><div class="fill" style="width:22%"></div></div>
+                <div class="debate-counts"><span>22% Yes</span><span>3,891 in</span></div>
+              </div>
+              <div class="debate-card">
+                <div class="debate-tags"><span class="tag">Tech</span><span class="tag">Ethics</span></div>
+                <p class="debate-q">"Should feeds be opt-in by default?"</p>
+                <div class="debate-bar"><div class="fill" style="width:64%"></div></div>
+                <div class="debate-counts"><span>64% Yes</span><span>1,204 in</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Tide -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">03.</div>
+      <div>
+        <h2><span class="italic">Tide.</span> A resonance pacer.</h2>
+        <p class="sec-lead">Five seconds in, five seconds out. Six breaths per minute. The protocol with the strongest acute non-pharmacologic effect on heart-rate variability known.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Clinical, not gimmicky</span>
+        <h3>The body settles to a rhythm.</h3>
+        <p>The outer ring breathes on the protocol. Your warm disc follows your touch. The closer your edge tracks the pacer ring, the higher your coherence climbs and the more the whole canvas glows. A soft haptic on each phase transition lets you keep rhythm with your eyes closed.</p>
+        <a class="btn" href="tide.html">Open the Tide page</a>
+      </div>
+      <div class="reveal" data-delay="1">
+        <div class="tide-canvas-wrap" style="max-width:380px;">
+          <canvas id="tide-canvas" aria-label="Tide pacer preview"></canvas>
+          <div class="tide-instr">Hold to inhale · release to exhale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Feed -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">04.</div>
+      <div>
+        <h2><span class="italic">Feed</span> that respects your time.</h2>
+        <p class="sec-lead">Refresh reorders posts you've already seen instead of hiding them. The Refine card slot moves around so you actually notice it. Nothing pretends to be urgent.</p>
+      </div>
+    </header>
+    <div class="feature-row reverse">
+      <div class="feature-text reveal">
+        <span class="ordinal">Sane defaults</span>
+        <h3>Refresh, don't bait.</h3>
+        <p>Hide-on-seen is the cheap trick that makes feeds feel infinite. Connect's refresh shuffles instead. The Refine card, the surface where you tune your interests, slides into a different slot on every refresh so you bump into it again.</p>
+        <p>Interest-matched debates land in the same feed as people you follow. The mix is yours to tune.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+          <div class="phone-screen">
+            <div class="scr">
+              <div class="scr-eyebrow">Home</div>
+              <div class="story-card">
+                <div class="story-meta"><span>Refine your feed</span><span>tap to open</span></div>
+                <p class="story-body" style="font-size:14px;">"Pick the topics you want more of. Or fewer."</p>
+              </div>
+              <div class="debate-card" style="margin-top:10px;">
+                <div class="debate-tags"><span class="tag">Books</span></div>
+                <p class="debate-q">"Finish every book you start?"</p>
+                <div class="debate-bar"><div class="fill" style="width:41%"></div></div>
+              </div>
+              <div class="story-card" style="margin-top:10px;">
+                <div class="story-meta"><span>Reza · 22h ago</span><span>quiet</span></div>
+                <p class="story-body" style="font-size:14px;">"Took the long way home."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Quizzes -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">05.</div>
+      <div>
+        <h2><span class="italic">Quizzes</span> built from posts.</h2>
+        <p class="sec-lead">Channel shorts and shared links can spin up a short adaptive quiz. Three to five questions, no padding, no trick questions.</p>
+      </div>
+    </header>
+    <div class="feature-row">
+      <div class="feature-text reveal">
+        <span class="ordinal">Adaptive · short · honest</span>
+        <h3>A quick check on what stuck.</h3>
+        <p>The shared quiz engine sanitises each question with a strict per-question pass, and the analysis prompt is tightened with a disambiguation block so the questions don't drift onto things the source didn't actually say.</p>
+        <p>Verified working on June 1, 2026.</p>
+        <div class="pull">Made for retention, not for streaks.</div>
+      </div>
+      <div class="reveal" data-delay="1">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+          <div class="phone-screen">
+            <div class="scr">
+              <div class="scr-eyebrow">Quiz · 2 of 4</div>
+              <p class="scr-title">"Which idea is closest to the one the article opens with?"</p>
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;">
+                <div class="debate-card" style="padding:12px;"><p class="debate-q" style="font-size:14px;margin:0;">Reading is a form of paying attention.</p></div>
+                <div class="debate-card" style="padding:12px;border-color:var(--inhale);"><p class="debate-q" style="font-size:14px;margin:0;">Attention is the rarest thing we still have.</p></div>
+                <div class="debate-card" style="padding:12px;"><p class="debate-q" style="font-size:14px;margin:0;">Reading replaces attention.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Spotlight -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">06.</div>
+      <div>
+        <h2><span class="italic">Spotlight.</span> A small front room.</h2>
+        <p class="sec-lead">A curated shelf of posts. Quiet, not viral. Lives next to the search surface so you can wander without doom-scrolling.</p>
+      </div>
+    </header>
+  </section>
+
+  <!-- 07 Offline -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">07.</div>
+      <div>
+        <h2><span class="italic">Offline</span> opens a small room.</h2>
+        <p class="sec-lead">When the network drops, four games take over. They work entirely on-device.</p>
+      </div>
+    </header>
+    <div class="four reveal">
+      <div class="four-item">
+        <div class="ord"><span>i.</span><span>One player</span></div>
+        <h3><span class="italic">Net.</span></h3>
+        <p class="desc">Rotate to mend the network.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>ii.</span><span>One player</span></div>
+        <h3><span class="italic">Tide.</span></h3>
+        <p class="desc">Breathe with a stranger.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>iii.</span><span>2 – 10</span></div>
+        <h3><span class="italic">Spin.</span></h3>
+        <p class="desc">A wheel decides who must answer.</p>
+      </div>
+      <div class="four-item">
+        <div class="ord"><span>iv.</span><span>4 – 10</span></div>
+        <h3><span class="italic">Faker.</span></h3>
+        <p class="desc">One of you knows nothing.</p>
+      </div>
+    </div>
+    <div style="margin-top:48px;" class="reveal">
+      <a class="btn" href="offline.html">Open the offline hub</a>
+    </div>
+  </section>
+
+  <!-- 08 Voice messages + DMs -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">08.</div>
+      <div>
+        <h2><span class="italic">Messages</span> with a voice.</h2>
+        <p class="sec-lead">DMs with voice notes you can record and scrub. iTunes-style music picker if you want to share a track from your library.</p>
+      </div>
+    </header>
+  </section>
+
+  <!-- 09 Privacy posture -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">09.</div>
+      <div>
+        <h2><span class="italic">Privacy</span> as a posture, not a page.</h2>
+        <p class="sec-lead">Data sits in Supabase, hosted in the EU. No third-party trackers. No selling your data, ever. Pro removes ads entirely.</p>
+      </div>
+    </header>
+    <div class="reveal" style="margin-top:32px;">
+      <a class="btn" href="privacy.html">Read the privacy details</a>
+    </div>
+  </section>
+
+  <!-- 10 Brand reservation -->
+  <section class="wrap hair-top">
+    <header class="sec-head reveal">
+      <div class="ordinal">10.</div>
+      <div>
+        <h2><span class="italic">The name</span> is reserved.</h2>
+        <p class="sec-lead">Usernames containing "Connect" can't be claimed. First names starting with "Connect" can't either. A small thing, but it matters.</p>
+      </div>
+    </header>
+  </section>
+
+  <section class="manifesto wrap hair-top reveal">
+    <p>
+      <span class="mute">Twelve features in.</span><br>
+      One person, building one careful thing at a time.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-col-brand">
+        <p class="foot-brand">Connect<span class="dot">.</span></p>
+        <p style="color:var(--ink-mute);font-size:14px;margin-top:18px;max-width:340px;">A small social app, made on purpose.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="features.html">Features</a>
+        <a href="tide.html">Tide</a>
+        <a href="offline.html">Offline</a>
+        <a href="pro.html">Pro</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Connect.</span>
+      <span>Built by Mahdi · Paris</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
