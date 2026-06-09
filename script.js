@@ -22,15 +22,15 @@ const translations = {
     'nav.explore':'Explorer','nav.chat':'Chat','nav.offline':'Hors-ligne',
     'nav.ai':'IA','nav.pro':'Pro','nav.about':'À propos','nav.contact':'Contact',
 
-    'hero.tagline':'Une app sociale pensée pour la vraie conversation · iOS · Mai 2026',
+    'hero.tagline':'Une app sociale pensée pour la vraie conversation · iOS · Juillet 2026',
     'hero.cta1':'Voir l\'app','hero.cta2':'Lire le manifeste','hero.scroll':'Défiler',
 
-    'connect.label':'Produit mobile','connect.meta':'iOS — Mai 2026',
+    'connect.label':'Produit mobile','connect.meta':'iOS — Juillet 2026',
     'connect.title':'Une app sociale pensée pour la vraie conversation.',
     'connect.lead':"Connect est une plateforme sociale moderne où l'on partage des posts, des stories et des débats autour de contenus réels. Elle privilégie l'interaction plutôt que la consommation.",
     'connect.lead2':"Un design épuré et immersif. Connect transforme le réseau social en un espace d'expression, de conversation et d'engagement réel.",
     'connect.m1.label':'Plateforme','connect.m1.val':'iOS à la sortie · Android bientôt',
-    'connect.m2.label':'Sortie','connect.m2.val':'31 Mai · 2026',
+    'connect.m2.label':'Sortie','connect.m2.val':'1 Juillet · 2026',
     'connect.m3.label':'Compte à rebours',
     'connect.cap1':'Accueil','connect.cap2':'Story','connect.cap3':'Profil',
     'connect.phone1.text':"Un fil en temps réel où posts, stories et réactions cohabitent.",
@@ -99,12 +99,12 @@ const translations = {
     'about.title':"Une petite app sociale, faite par une personne, avec intention.",
     'about.lead':"Construit par Mahdi, à Paris. Pas d'équipe, pas de pitch deck, pas de roadmap publique. Une chose à la fois.",
     'about.based':'Basé à','about.origin':'Origine','about.languages':'Langues',
-    'about.statuslabel':'Statut','about.status':'Lancement le 31 Mai 2026',
+    'about.statuslabel':'Statut','about.status':'Lancement le 1 Juillet 2026',
 
     'contact.label':'Lien','contact.meta':"On reste en contact",
     'contact.title':"Pour parler du projet, ou attendre le lancement.",
-    'contact.lead':"L'app sort le 31 mai 2026. Avant ça, écris si tu as une question, ou suis le projet en bas.",
-    'contact.email':'Infos','contact.cv':'Portfolio','contact.available':'Lancement Mai 2026'
+    'contact.lead':"L'app sort le 1 juillet 2026. Avant ça, écris si tu as une question, ou suis le projet en bas.",
+    'contact.email':'Infos','contact.cv':'Portfolio','contact.available':'Lancement Juillet 2026'
   },
   en: {}
 };
@@ -143,11 +143,11 @@ applyLang();
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-/* ----- Countdown to May 31 2026 ----- */
+/* ----- Countdown to July 1 2026 ----- */
 const countdown = document.getElementById('countdown');
 function tickCountdown(){
   if (!countdown) return;
-  const target = new Date('2026-05-31T00:00:00');
+  const target = new Date('2026-07-01T00:00:00');
   const ms = target - new Date();
   if (ms <= 0){
     countdown.textContent = lang === 'fr' ? 'Lancé' : 'Launched';
