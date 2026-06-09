@@ -18,51 +18,93 @@
 /* ----- i18n ----- */
 const translations = {
   fr: {
-    'nav.stories':'Stories','nav.debates':'Débats','nav.tide':'Tide',
-    'nav.offline':'Hors-ligne','nav.pro':'Pro','nav.about':'À propos','nav.contact':'Contact',
+    'nav.stories':'Stories','nav.debates':'Débats','nav.learn':'Apprendre',
+    'nav.explore':'Explorer','nav.chat':'Chat','nav.offline':'Hors-ligne',
+    'nav.ai':'IA','nav.pro':'Pro','nav.about':'À propos','nav.contact':'Contact',
 
-    'hero.tagline':'Une app sociale pensée pour la vraie conversation — iOS · Mai 2026',
+    'hero.tagline':'Une app sociale pensée pour la vraie conversation · iOS · Mai 2026',
     'hero.cta1':'Voir l\'app','hero.cta2':'Lire le manifeste','hero.scroll':'Défiler',
 
     'connect.label':'Produit mobile','connect.meta':'iOS — Mai 2026',
     'connect.title':'Une app sociale pensée pour la vraie conversation.',
-    'connect.lead':"Connect est une plateforme sociale moderne où l'on partage des posts, des moments et des débats autour de contenus réels du web. Elle privilégie l'interaction plutôt que la consommation : réagir, discuter et challenger les idées au lieu de simplement scroller.",
+    'connect.lead':"Connect est une plateforme sociale moderne où l'on partage des posts, des stories et des débats autour de contenus réels. Elle privilégie l'interaction plutôt que la consommation.",
     'connect.lead2':"Un design épuré et immersif. Connect transforme le réseau social en un espace d'expression, de conversation et d'engagement réel.",
     'connect.m1.label':'Plateforme','connect.m1.val':'iOS à la sortie · Android bientôt',
     'connect.m2.label':'Sortie','connect.m2.val':'31 Mai · 2026',
     'connect.m3.label':'Compte à rebours',
-    'connect.cap1':'Accueil','connect.cap2':'Débat','connect.cap3':'Profil',
-    'connect.phone1.text':"Un fil en temps réel où posts, instants et réactions cohabitent.",
-    'connect.phone2.text':"Des arènes Pour/Contre. Les idées se confrontent, pas juste likées.",
+    'connect.cap1':'Accueil','connect.cap2':'Story','connect.cap3':'Profil',
+    'connect.phone1.text':"Un fil en temps réel où posts, stories et réactions cohabitent.",
+    'connect.phone2.text':"Stories qui disparaissent en 24h. Les réponses restent liées au moment partagé.",
     'connect.phone3.text':"Une identité pensée pour l'expression, pas pour les métriques.",
 
-    'debates.label':'Débats','debates.title':'Un agent qui lit chaque débat et le tague.',
-    'debates.lead':"Trois à cinq slugs de taxonomie écrits sur chaque débat. Un graphe de sujets voisins l'envoie aux personnes que ça intéresse vraiment.",
-    'debates.v1':'Grille du centre des débats','debates.v2':'Vote Pour/Contre','debates.v3':'Détail d\'un sujet','debates.v4':'Réactions du fil',
+    'debates.label':'Débats','debates.meta':'Pour / Contre · taggés par l\'IA',
+    'debates.title':'Des débats taggés par un agent.',
+    'debates.lead':"Trois à cinq slugs de taxonomie écrits sur chaque débat. Un graphe de sujets voisins l'envoie aux personnes que ça intéresse.",
+    'debates.cap1':'Centre','debates.cap2':'Vote','debates.cap3':'Détail','debates.cap4':'Fil',
+    'debates.p1':"La grille du centre des débats. Tous les sujets ouverts.",
+    'debates.p2':"Pour / Contre, voté en direct. Les côtés se rééquilibrent toutes les heures.",
+    'debates.p3':"Détail d'un sujet, avec ses débats associés via les sujets voisins.",
+    'debates.p4':"Réactions du fil. Les commentaires sont ouverts mais limités à 280 caractères.",
 
-    'tide.label':'Bien-être','tide.title':'Tide. Un pacer de respiration de résonance.',
-    'tide.lead':"Cinq secondes d'inspiration, cinq secondes d'expiration. Six respirations par minute. Le protocole le plus puissant connu pour la variabilité cardiaque.",
-    'tide.piece':'Image',
+    'learn.label':'Intérêts & Apprendre','learn.meta':'Quiz adaptatifs · 3-5 questions',
+    'learn.title':'Choisis tes sujets. Apprends pendant que tu regardes.',
+    'learn.lead':"Au démarrage, tu choisis tes intérêts dans une taxonomie partagée. Le fil s'adapte. Et à la fin de chaque vidéo, un petit quiz t'aide à retenir.",
+    'learn.cap1':'Intérêts','learn.cap2':'Lecteur','learn.cap3':'Quiz','learn.cap4':'Réponse',
+    'learn.p1':"Choisis tes intérêts. Pas de hashtags à inventer, juste une taxonomie partagée.",
+    'learn.p2':"Le lecteur vidéo embarqué. Les vidéos sont importées depuis YouTube, Vimeo ou liens directs.",
+    'learn.p3':"À la fin de chaque vidéo, un quiz généré par l'IA. Trois à cinq questions.",
+    'learn.p4':"Réponse adaptative. Le quiz suivant ajuste sa difficulté.",
 
-    'offline.label':'Hors-ligne','offline.title':'Quand le réseau tombe, une petite pièce s\'ouvre.',
+    'explore.label':'Explorer','explore.meta':'Carte · signaux d\'humeur',
+    'explore.title':'Trouve les gens près de toi. Réponds à une humeur, pas à un profil.',
+    'explore.lead':"La carte montre les utilisateurs autour de toi avec leur dernier signal d'humeur. Un tap, et tu réponds à l'humeur directement, sans passer par le profil.",
+    'explore.cap1':'Carte','explore.cap2':'Réponse',
+    'explore.p1':"Un utilisateur apparaît sur la carte. Distance approximative, humeur récente.",
+    'explore.p2':"Tu réponds à son humeur. Pas de demande d'ami, pas de DM bloqué.",
+
+    'chat.label':'Chat','chat.meta':'Voix · musique · privé',
+    'chat.title':'Conversations privées, comme elles devraient être.',
+    'chat.lead':"Messages texte, vocaux et partage de musique iTunes. Pas de tracking de lecture, pas de signalement de présence si tu ne veux pas. Les médias expirent par défaut au bout d'une semaine.",
+    'chat.fact1':'Vocaux','chat.fact1v':'Enregistrement et lecture scrubble',
+    'chat.fact2':'Musique','chat.fact2v':'Partage depuis ta bibliothèque iTunes',
+    'chat.fact3':'Médias','chat.fact3v':'Expirent automatiquement en 7 jours',
+    'chat.fact4':'Présence','chat.fact4v':'Coupable, par défaut activée à \'aucune\'',
+
+    'offline.label':'Hors-ligne','offline.meta':'On-device · sans serveur',
+    'offline.title':'Quand le réseau tombe, une petite pièce s\'ouvre.',
     'offline.lead':"Quatre jeux. Pas de comptes, pas de serveurs, pas de score au-delà de ce qui est à l'écran. Ils tournent quand le reste de l'app ne peut pas.",
-    'offline.net.t':'Net.','offline.net.p':"Tourner pour réparer le réseau.",
-    'offline.tide.t':'Tide.','offline.tide.p':"Respirer avec un inconnu.",
-    'offline.spin.t':'Spin.','offline.spin.p':"Une roue décide qui doit répondre.",
-    'offline.faker.t':'Faker.','offline.faker.p':"L'un de vous ne sait rien.",
+    'offline.cap1':'Net.','offline.cap2':'Tide.','offline.cap3':'Spin.','offline.cap4':'Faker.',
+    'offline.p1':"Tourner pour réparer le réseau. Une grille procédurale, sans fin.",
+    'offline.p2':"Respirer avec un inconnu. Pacer de résonance à 6 BPM, cliniquement validé.",
+    'offline.p3':"Une roue qui ratchete sous ton pouce. Vérité ou action, pour 2 à 10 autour d'un téléphone.",
+    'offline.p4':"L'un de vous ne sait rien. Jeu de dessin pour 4 à 10 partageant un téléphone.",
 
-    'pro.label':'Tarif','pro.title':'Connect Pro. La même app, avec plus de place.',
-    'pro.lead':"La pub finance le gratuit. Pro la coupe, et ouvre les surfaces qui ont besoin d'un peu plus de place.",
+    'ai.label':'IA','ai.meta':'Outils, pas fonctionnalités',
+    'ai.title':"L'IA fait le travail ennuyeux.",
+    'ai.lead':"Six endroits où l'IA tourne, en arrière-plan. Aucun n'est marketé comme une feature. C'est juste de la maintenance, faite mieux.",
+    'ai.pull':"L'IA ne fabrique pas les conversations. Elle nettoie le sol entre deux d'entre elles.",
+    'ai.f1.t':'Recherche','ai.f1.p':"Recherche en langage naturel sur tout le fil. \"Les débats de la semaine sur l'urbanisme où quelqu'un a changé d'avis.\" La requête tourne sur le même modèle d'embeddings que le classement de la home.",
+    'ai.f2.t':'Tri des signalements','ai.f2.p':"Chaque signalement passe d'abord par un agent Groq. Il classe la sévérité (faible / moyen / urgent), catégorise (harcèlement / spam / usurpation / menace), pré-remplit un résumé et route vers le bon modérateur.",
+    'ai.f3.t':'Vérification','ai.f3.p':"Un pipeline de fact-check. Les déclarations qui ressemblent à des citations sont recoupées avec une base de connaissances. Une puce s'affiche : vérifié, contesté, ou pas d'éléments.",
+    'ai.f4.t':'Tagging des débats','ai.f4.p':"Chaque débat passe par un agent sur llama-3.3-70b. Il écrit trois à cinq slugs de taxonomie du même ensemble qui pilote tes intérêts. Un graphe de sujets voisins propage le post aux pièces adjacentes.",
+    'ai.f5.t':'Quiz des vidéos','ai.f5.p':"Les shorts et liens partagés produisent des quiz adaptatifs. Trois à cinq questions, sans remplissage. Sanitisés question par question.",
+    'ai.f6.t':'Appariement d\'humeur','ai.f6.p':"Sur la carte Explorer, les signaux d'humeur viennent de tes derniers posts. Le matcher pèse les humeurs complémentaires, pas juste les distances.",
+
+    'pro.label':'Tarif','pro.meta':'Optionnel · résiliable à tout moment',
+    'pro.title':'Connect Pro. La même app, avec plus de place.',
+    'pro.lead':"La pub finance le gratuit. Pro la coupe, et ouvre les surfaces qui ont besoin d'un peu plus de place. Rien d'essentiel n'est derrière le paywall.",
     'pro.free':'Gratuit','pro.pro':'Pro',
 
-    'about.label':'Créateur','about.title':"Une petite app sociale, faite par une personne, avec intention.",
-    'about.lead':"Mahdi, basé à Paris. Connect a commencé comme un projet personnel, et le reste. Pas d'équipe, pas de pitch deck, pas de roadmap publique.",
+    'about.label':'Le créateur','about.meta':'Solo · Paris',
+    'about.title':"Une petite app sociale, faite par une personne, avec intention.",
+    'about.lead':"Construit par Mahdi, à Paris. Pas d'équipe, pas de pitch deck, pas de roadmap publique. Une chose à la fois.",
     'about.based':'Basé à','about.origin':'Origine','about.languages':'Langues',
     'about.statuslabel':'Statut','about.status':'Lancement le 31 Mai 2026',
 
-    'contact.label':'Lien','contact.title':"Reste au courant pour le lancement.",
-    'contact.lead':"Pré-inscription par mail. Ou suivez le projet via les liens ci-dessous.",
-    'contact.email':'Email','contact.cv':'Pré-inscription','contact.available':'Lancement Mai 2026'
+    'contact.label':'Lien','contact.meta':"On reste en contact",
+    'contact.title':"Pour parler du projet, ou attendre le lancement.",
+    'contact.lead':"L'app sort le 31 mai 2026. Avant ça, écris si tu as une question, ou suis le projet en bas.",
+    'contact.email':'Infos','contact.cv':'Portfolio','contact.available':'Lancement Mai 2026'
   },
   en: {}
 };
@@ -149,7 +191,6 @@ if (navMenuBtn && siteHeader && mobilePanel){
 
 /* ----- Active nav + scrolled header ----- */
 const sectionsForNav = Array.from(document.querySelectorAll('section[id]'));
-
 function onScroll(){
   if (sectionsForNav.length){
     let currentId = sectionsForNav[0].id;
@@ -161,155 +202,47 @@ function onScroll(){
       link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
     });
   }
-  if (siteHeader){
-    siteHeader.classList.toggle('scrolled', window.scrollY > 40);
-  }
+  if (siteHeader) siteHeader.classList.toggle('scrolled', window.scrollY > 40);
 }
 window.addEventListener('scroll', onScroll, { passive:true });
 window.addEventListener('load', onScroll);
 onScroll();
 
-/* ----- Phone parallax ----- */
-const phoneStage = document.getElementById('phoneStage');
-if (phoneStage && matchMedia('(hover:hover)').matches){
-  const cols = phoneStage.querySelectorAll('.phone-col');
-  phoneStage.addEventListener('pointermove', (e)=>{
-    const rect = phoneStage.getBoundingClientRect();
+/* ----- Phone parallax (generalised to every stage) ----- */
+const hoverable = matchMedia('(hover:hover)').matches;
+document.querySelectorAll('.phone-stage, .phone-stage-4, .phone-pair').forEach((stage)=>{
+  if (!hoverable) return;
+  const cols = stage.querySelectorAll('.phone-col');
+  stage.addEventListener('pointermove', (e)=>{
+    const rect = stage.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - .5;
     const y = (e.clientY - rect.top) / rect.height - .5;
     cols.forEach((col)=>{
-      const depth = col.classList.contains('center') ? 1 : .7;
-      const baseRot = col.classList.contains('left') ? -4 : col.classList.contains('right') ? 4 : 0;
-      const baseY = col.classList.contains('center') ? -18 : 24;
+      const center = col.classList.contains('center') || col.classList.contains('p2') || col.classList.contains('p3');
+      const depth = center ? 1 : .7;
+      const baseRot = parseFloat(col.dataset.rot || (col.classList.contains('left')?'-4':col.classList.contains('right')?'4':col.classList.contains('p1')?'-7':col.classList.contains('p4')?'7':col.classList.contains('p2')?'-2':col.classList.contains('p3')?'2':'0'));
+      const baseY = parseFloat(col.dataset.y || (col.classList.contains('center')?'-18':col.classList.contains('p2')||col.classList.contains('p3')?'4':col.classList.contains('p1')||col.classList.contains('p4')?'36':'24'));
       col.style.transform = `translate(${x*14*depth}px, ${baseY + y*10*depth}px) rotate(${baseRot + x*3}deg)`;
     });
   });
-  phoneStage.addEventListener('pointerleave', ()=>{
+  stage.addEventListener('pointerleave', ()=>{
     cols.forEach(c=>{ c.style.transform = ''; });
   });
-}
-
-/* ----- Carousel ----- */
-function buildCarousel(rootId, opts={}){
-  const root = document.getElementById(rootId);
-  if (!root) return;
-  const slides = Array.from(root.querySelectorAll('.carousel-slide'));
-  const prev = root.querySelector('.car-btn.prev');
-  const next = root.querySelector('.car-btn.next');
-  const thumbsRoot = root.querySelector('.carousel-thumbs, .thumb-grid');
-  const thumbs = thumbsRoot ? Array.from(thumbsRoot.querySelectorAll('.thumb')) : [];
-
-  const dotsRoot = opts.dotsId ? document.getElementById(opts.dotsId) : null;
-  if (dotsRoot){
-    dotsRoot.innerHTML = '';
-    slides.forEach((_, idx)=>{
-      const d = document.createElement('i');
-      if (idx === 0) d.classList.add('active');
-      dotsRoot.appendChild(d);
-    });
-  }
-  const dots = dotsRoot ? Array.from(dotsRoot.querySelectorAll('i')) : [];
-
-  let i = 0;
-
-  function render(){
-    slides.forEach((s, idx)=>s.classList.toggle('active', idx === i));
-    thumbs.forEach((t, idx)=>t.classList.toggle('active', idx === i));
-    dots.forEach((d, idx)=>d.classList.toggle('active', idx === i));
-    if (opts.isVideo){
-      slides.forEach((s, idx)=>{
-        const v = s.querySelector('video');
-        if (!v) return;
-        if (idx === i){ v.play().catch(()=>{}); }
-        else { v.pause(); try { v.currentTime = 0; } catch(_){} }
-      });
-    }
-    if (opts.onChange) opts.onChange(i);
-  }
-
-  if (prev) prev.addEventListener('click', ()=>{ i = (i - 1 + slides.length) % slides.length; render(); });
-  if (next) next.addEventListener('click', ()=>{ i = (i + 1) % slides.length; render(); });
-  thumbs.forEach((t)=>{
-    t.addEventListener('click', ()=>{
-      const idx = Number(t.dataset.index);
-      i = Number.isFinite(idx) ? idx : thumbs.indexOf(t);
-      render();
-    });
-  });
-
-  const stage = root.querySelector('.carousel-stage');
-  let startX = 0, startY = 0, dragging = false;
-  if (stage){
-    stage.addEventListener('pointerdown', (e)=>{
-      if (e.target.closest('.car-btn')) return;
-      startX = e.clientX; startY = e.clientY; dragging = true;
-    });
-    stage.addEventListener('pointerup', (e)=>{
-      if (!dragging) return;
-      const dx = e.clientX - startX, dy = e.clientY - startY;
-      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)){
-        if (dx < 0 && next) next.click();
-        else if (dx > 0 && prev) prev.click();
-      }
-      dragging = false;
-    });
-    stage.addEventListener('pointercancel', ()=>{ dragging = false; });
-  }
-
-  render();
-}
-
-/* Build thumbs for Tide image carousel */
-(function buildTideThumbs(){
-  const grid = document.getElementById('tideThumbs');
-  if (!grid) return;
-  const slides = document.querySelectorAll('#tideTrack .carousel-slide img');
-  slides.forEach((img, idx)=>{
-    const b = document.createElement('button');
-    b.className = 'thumb' + (idx === 0 ? ' active' : '');
-    b.dataset.index = String(idx);
-    b.setAttribute('aria-label', `Tide ${idx+1}`);
-    b.innerHTML = `<img src="${img.src}" alt="">`;
-    grid.appendChild(b);
-  });
-})();
-
-const debateTitleEl = document.getElementById('debateTitle');
-const debateIndexEl = document.getElementById('debateIndex');
-const tideIndexEl = document.getElementById('tideIndex');
-const debateTitles = ['debates.v1','debates.v2','debates.v3','debates.v4'];
-const debateTitlesEn = ['Debate center grid','For / Against voting','Topic detail','Thread reactions'];
-
-buildCarousel('debateCarousel', {
-  dotsId:'debateDots',
-  onChange:(i)=>{
-    if (debateIndexEl) debateIndexEl.textContent = String(i+1).padStart(2,'0');
-    if (debateTitleEl){
-      const key = debateTitles[i];
-      const txt = translations[lang]?.[key] || debateTitlesEn[i];
-      debateTitleEl.textContent = txt;
-      debateTitleEl.setAttribute('data-i18n', key);
-    }
-  }
 });
 
-buildCarousel('tideCarousel', {
-  dotsId:'tideDots',
-  onChange:(i)=>{ if (tideIndexEl) tideIndexEl.textContent = String(i+1).padStart(2,'0'); }
-});
-
-/* ----- Lightbox (double-click to expand) ----- */
+/* ----- Lightbox (click any phone screenshot to expand) ----- */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const closeLightbox = document.getElementById('closeLightbox');
 
 if (lightbox && lightboxImg){
-  document.querySelectorAll('.carousel-slide img').forEach((img)=>{
-    img.addEventListener('dblclick', ()=>{
+  document.querySelectorAll('.phone-frameless img').forEach((img)=>{
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', (e)=>{
+      e.preventDefault();
       lightboxImg.src = img.src;
       lightbox.classList.add('open');
     });
-    img.style.cursor = 'zoom-in';
   });
   if (closeLightbox) closeLightbox.addEventListener('click', ()=>lightbox.classList.remove('open'));
   lightbox.addEventListener('click', (e)=>{ if (e.target === lightbox) lightbox.classList.remove('open'); });
@@ -318,7 +251,7 @@ if (lightbox && lightboxImg){
 
 /* ----- Reveal on scroll ----- */
 (() => {
-  const revealItems = document.querySelectorAll('.s-head, .head-grid, .connect-head, .phone-col, .carousel, .skill-row, .career-col, .portrait, .about-copy, .contact-cards');
+  const revealItems = document.querySelectorAll('.s-head, .head-grid, .connect-head, .phone-col, .ai-row, .ai-intro, .career-col, .portrait, .about-copy, .contact-cards, .phone-solo .solo-copy');
   revealItems.forEach(el=>el.setAttribute('data-reveal',''));
   if ('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries)=>{
@@ -336,15 +269,11 @@ if (lightbox && lightboxImg){
 })();
 
 /* =========================================================
-   WebGL nebula background (grayscale version)
+   WebGL nebula background (grayscale)
    ========================================================= */
 
 const canvas = document.getElementById('shader');
-const gl = canvas?.getContext('webgl', {
-  antialias:false,
-  premultipliedAlpha:false,
-  powerPreference:'high-performance'
-});
+const gl = canvas?.getContext('webgl', { antialias:false, premultipliedAlpha:false, powerPreference:'high-performance' });
 
 if (canvas && gl){
   const quad = gl.createBuffer();
@@ -372,7 +301,6 @@ void main(){
   float n2=fbm(q*2.4-t*0.7);
   float dens=smoothstep(0.16,0.95,n*0.72+n2*0.4);
 
-  /* Grayscale palette */
   vec3 cBlack=vec3(0.005);
   vec3 cAsh  =vec3(0.16);
   vec3 cGrey =vec3(0.32);
@@ -395,12 +323,8 @@ void main(){
 
   function compile(src, type){
     const shader = gl.createShader(type);
-    gl.shaderSource(shader, src);
-    gl.compileShader(shader);
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)){
-      console.error(gl.getShaderInfoLog(shader));
-      return null;
-    }
+    gl.shaderSource(shader, src); gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)){ console.error(gl.getShaderInfoLog(shader)); return null; }
     return shader;
   }
 
@@ -409,13 +333,9 @@ void main(){
 
   if (vs && fs){
     const program = gl.createProgram();
-    gl.attachShader(program, vs);
-    gl.attachShader(program, fs);
-    gl.bindAttribLocation(program, 0, 'a');
-    gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)){
-      console.error(gl.getProgramInfoLog(program));
-    }
+    gl.attachShader(program, vs); gl.attachShader(program, fs);
+    gl.bindAttribLocation(program, 0, 'a'); gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)){ console.error(gl.getProgramInfoLog(program)); }
 
     const uniforms = {};
     ['u_time','u_res','u_mouse','u_intensity','u_scale','u_speed'].forEach((name)=>{
