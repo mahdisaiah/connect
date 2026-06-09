@@ -1,56 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lost · Connect.</title>
-<meta name="theme-color" content="#050505" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Connect</title>
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<canvas class="grid-bg" aria-hidden="true"></canvas>
+  <canvas id="shader" aria-hidden="true"></canvas>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="features.html">Features</a>
-      <a href="tide.html">Tide</a>
-      <a href="offline.html">Offline</a>
-      <a href="pro.html">Pro</a>
-      <a href="manifesto.html">Manifesto</a>
+  <header class="site-header" id="siteHeader">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-brand" href="index.html#home" aria-label="Connect home">
+        <span class="brand-mark">C.</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#connect" class="nav-link">Stories</a>
+        <a href="index.html#debates" class="nav-link">Debates</a>
+        <a href="index.html#tide" class="nav-link">Tide</a>
+        <a href="index.html#offline" class="nav-link">Offline</a>
+        <a href="index.html#pro" class="nav-link">Pro</a>
+        <a href="index.html#about" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions">
+        <a href="index.html#contact" class="nav-contact">Contact</a>
+      </div>
     </nav>
-    <button class="nav-menu-btn" aria-expanded="false">Menu</button>
-  </div>
-</header>
+  </header>
 
-<main>
-  <div class="wrap lost">
-    <div class="hero-eyebrow" style="margin-bottom:32px;padding-bottom:14px;">
-      <span><span class="live-dot"></span>404 · Page not found</span>
-      <span>You took a detour</span>
-    </div>
-    <h1><span class="italic">This page</span> isn't here.</h1>
-    <p>Maybe it never was. Maybe it floated away on the tide. Either way, the door back to the start is still open.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;">
-      <a class="btn btn-primary" href="index.html">Back to the start</a>
-      <a class="btn" href="features.html">See what's inside</a>
-    </div>
-  </div>
-</main>
+  <main>
+    <section class="hero" id="home">
+      <h1 class="hero-name"><span>404</span><em class="serif">.</em></h1>
+      <p class="tagline">This page isn't here — try the start</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="index.html">Back to the start</a>
+        <a class="btn" href="index.html#connect">See the app</a>
+      </div>
+    </section>
+  </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-bottom" style="margin-top:0;">
-      <span>© 2026 Connect.</span>
-      <span>Built by Mahdi · Paris</span>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/site.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

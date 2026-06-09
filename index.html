@@ -1,327 +1,473 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Connect. A social app that breathes.</title>
-<meta name="description" content="Connect is a social app built around stories that fade, debates that matter, and a clinical-grade resonance pacer for when you need to slow down." />
-<meta property="og:title" content="Connect." />
-<meta property="og:description" content="A social app that breathes." />
-<meta property="og:type" content="website" />
-<meta name="theme-color" content="#050505" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect — A social platform for real conversation</title>
+  <meta name="description" content="Connect is a modern social platform built around posts, moments, debates and a clinical-grade breathing pacer. iOS, May 2026." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<canvas class="grid-bg" aria-hidden="true"></canvas>
+  <canvas id="shader" aria-hidden="true"></canvas>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="brand">Connect<span class="dot">.</span></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="features.html">Features</a>
-      <a href="tide.html">Tide</a>
-      <a href="offline.html">Offline</a>
-      <a href="pro.html">Pro</a>
-      <a href="manifesto.html">Manifesto</a>
+  <header class="site-header" id="siteHeader">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-brand" href="#home" aria-label="Connect home">
+        <span class="brand-mark">C.</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#connect" class="nav-link" data-i18n="nav.stories">Stories</a>
+        <a href="#debates" class="nav-link" data-i18n="nav.debates">Debates</a>
+        <a href="#tide" class="nav-link" data-i18n="nav.tide">Tide</a>
+        <a href="#offline" class="nav-link" data-i18n="nav.offline">Offline</a>
+        <a href="#pro" class="nav-link" data-i18n="nav.pro">Pro</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <span class="lang-current">EN</span>
+          <span class="lang-slash">/</span>
+          <span class="lang-next">FR</span>
+        </button>
+
+        <a href="#contact" class="nav-contact" data-i18n="nav.contact">Contact</a>
+
+        <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
-    <button class="nav-menu-btn" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-  </div>
-</header>
 
-<main>
-
-  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
-  <section class="hero wrap">
-    <div class="hero-eyebrow">
-      <span><span class="live-dot"></span>Now in private build · v1.0</span>
-      <span>iOS · Android</span>
+    <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+      <a href="#connect" class="mobile-link" data-i18n="nav.stories">Stories</a>
+      <a href="#debates" class="mobile-link" data-i18n="nav.debates">Debates</a>
+      <a href="#tide" class="mobile-link" data-i18n="nav.tide">Tide</a>
+      <a href="#offline" class="mobile-link" data-i18n="nav.offline">Offline</a>
+      <a href="#pro" class="mobile-link" data-i18n="nav.pro">Pro</a>
+      <a href="#about" class="mobile-link" data-i18n="nav.about">About</a>
+      <a href="#contact" class="mobile-link mobile-contact" data-i18n="nav.contact">Contact</a>
     </div>
+  </header>
 
-    <h1>
-      <span class="reveal-line"><span><span class="roman-thin">A</span> <span class="italic">social app</span></span></span>
-      <span class="reveal-line delay-1"><span><span class="italic">that doesn't ask</span></span></span>
-      <span class="reveal-line delay-2"><span><span class="italic">for everything.</span></span></span>
-    </h1>
-
-    <div class="hero-sub">
-      <div class="lead">
-        A small set of things, done with care. Stories that fade. Debates that matter. A pacer for when you need one.
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <h1 class="hero-name">
+        <span>Connect</span><em class="serif">.</em>
+      </h1>
+      <p class="tagline" data-i18n="hero.tagline">A social platform built for real conversation — iOS · May 2026</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#connect" data-i18n="hero.cta1">See the app</a>
+        <a class="btn" href="#about" data-i18n="hero.cta2">Read the manifesto</a>
       </div>
-      <div class="meta">
-        <p>Built by one person. Shipped one feature at a time. Free, with an optional Pro for the parts that need more room.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="features.html">See what's inside</a>
-          <a class="btn" href="manifesto.html">Read the manifesto</a>
+
+      <a href="#connect" class="scroll" aria-label="Scroll down">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- ========== 01 — CONNECT (phone showcase) ========== -->
+    <section class="section connect" id="connect">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">01</span>
+          <span class="s-label" data-i18n="connect.label">Mobile product</span>
+          <span class="s-rule"></span>
+          <span class="s-meta" data-i18n="connect.meta">iOS — May 2026</span>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── Manifesto teaser ─────────────────────────────────────────────── -->
-  <section class="manifesto wrap reveal">
-    <p>
-      <span class="mute">Most apps measure how long you stayed.</span><br>
-      Connect measures whether you wanted to stay at all.
-    </p>
-  </section>
+        <div class="connect-head">
+          <div class="lockup">
+            <span class="logo-box"><img src="images/logo.png" alt="Connect logo"></span>
+            <img class="wordmark" src="images/textlogo.png" alt="Connect">
+          </div>
 
-  <!-- ── 01 / Stories ─────────────────────────────────────────────────── -->
-  <section class="wrap" id="stories">
-    <header class="sec-head reveal">
-      <div class="ordinal">01.</div>
-      <div>
-        <h2><span class="italic">Stories</span> that fade.</h2>
-        <p class="sec-lead">Twenty-four hours. Replies thread back to the moment they were sent about. Then it's gone, on purpose.</p>
-      </div>
-    </header>
+          <h2 class="display" data-i18n="connect.title">
+            A social platform built<br>
+            for <em class="serif">real</em> conversation.
+          </h2>
 
-    <div class="feature-row">
-      <div class="feature-text reveal">
-        <span class="ordinal">A moment, returned to.</span>
-        <h3>Stays just long enough to matter.</h3>
-        <p>Post a thought, a photo, a voice note. Friends reply inside the story so the conversation doesn't drift. If someone reposts you, the original sticks around long enough for the thread to make sense. After twenty-four hours it disappears.</p>
-        <p>Past that window, a chat reply says, plainly, "Story not available." No traces, no archive pressure.</p>
-        <div class="pull">Made to be ephemeral. So you can be honest.</div>
-      </div>
-      <div class="reveal" data-delay="1">
-        <div class="phone" aria-hidden="true">
-          <div class="phone-notch"></div>
-          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
-          <div class="phone-screen">
-            <div class="scr">
-              <div class="scr-eyebrow">Stories</div>
-              <div class="story-ring-row">
-                <div class="story-ring active"></div>
-                <div class="story-ring"></div>
-                <div class="story-ring"></div>
-                <div class="story-ring"></div>
-                <div class="story-ring"></div>
-              </div>
-              <div class="story-card">
-                <div class="story-meta"><span>Léa · 14h ago</span><span>3 replies</span></div>
-                <p class="story-body">"Walked to the river. The light went pink for about ninety seconds and then it didn't."</p>
-              </div>
-              <div class="story-card" style="margin-top:10px;opacity:0.6;">
-                <div class="story-meta"><span>Reza · 22h ago</span><span>fading</span></div>
-                <p class="story-body" style="font-size:14px;">"Took the long way home. Worth it."</p>
-              </div>
+          <div class="connect-copy">
+            <p data-i18n="connect.lead">Connect is a modern social platform where people share posts, moments and debates around real content from across the web. It puts interaction ahead of consumption. React, discuss and challenge ideas instead of just scrolling.</p>
+            <p data-i18n="connect.lead2">Clean, immersive design throughout. Connect turns social media back into a place for expression, conversation and engagement that means something.</p>
+          </div>
+
+          <div class="connect-meta">
+            <div class="cm">
+              <span data-i18n="connect.m1.label">Platform</span>
+              <b data-i18n="connect.m1.val">iOS at launch · Android soon</b>
+            </div>
+            <div class="cm">
+              <span data-i18n="connect.m2.label">Release</span>
+              <b data-i18n="connect.m2.val">May 31 · 2026</b>
+            </div>
+            <div class="cm">
+              <span data-i18n="connect.m3.label">Countdown</span>
+              <b id="countdown">—</b>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── 02 / Debates ─────────────────────────────────────────────────── -->
-  <section class="wrap hair-top" id="debates">
-    <header class="sec-head reveal">
-      <div class="ordinal">02.</div>
-      <div>
-        <h2><span class="italic">Debates</span> that matter.</h2>
-        <p class="sec-lead">A small AI agent reads each debate and tags it with three to five taxonomy slugs. Then the feed surfaces it to the people who actually care.</p>
+        <div class="phone-stage" id="phoneStage">
+          <article class="phone-col left">
+            <div class="phone-frameless"><img src="images/home.png" alt="Connect home feed"></div>
+            <div class="caption"><span>01 · <span data-i18n="connect.cap1">Home</span></span><p data-i18n="connect.phone1.text">A real-time feed where posts, moments and reactions live together.</p></div>
+          </article>
+          <article class="phone-col center">
+            <div class="phone-frameless"><img src="images/story.png" alt="Connect story view"></div>
+            <div class="caption"><span>02 · <span data-i18n="connect.cap2">Story</span></span><p data-i18n="connect.phone2.text">Stories that fade after twenty-four hours. Replies stay tied to the moment they were sent about.</p></div>
+          </article>
+          <article class="phone-col right">
+            <div class="phone-frameless"><img src="images/profile.png" alt="Connect profile screen"></div>
+            <div class="caption"><span>03 · <span data-i18n="connect.cap3">Profile</span></span><p data-i18n="connect.phone3.text">Identity built for expression, not for metrics.</p></div>
+          </article>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <div class="feature-row reverse">
-      <div class="feature-text reveal">
-        <span class="ordinal">Quick takes, on real questions.</span>
-        <h3>Not what's loud. What you care about.</h3>
-        <p>Post a question. The tagger writes a few topic slugs onto it from the same taxonomy that drives your home feed. Sibling topics fan out so adjacent interests find their way in. No hashtags to invent, no algorithm to game.</p>
-        <p>Cast a side, see how the room leans, jump into the thread. Or just watch.</p>
-        <div class="pull">The room is who's listening. The feed makes sure they hear.</div>
-      </div>
-      <div class="reveal" data-delay="1">
-        <div class="phone" aria-hidden="true">
-          <div class="phone-notch"></div>
-          <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
-          <div class="phone-screen">
-            <div class="scr">
-              <div class="scr-eyebrow">For you · Debates</div>
-              <div class="debate-card">
-                <div class="debate-tags">
-                  <span class="tag">Tech</span><span class="tag">Ethics</span><span class="tag">AI</span>
-                </div>
-                <p class="debate-q">"Should social feeds be opt-in by default?"</p>
-                <div class="debate-bar"><div class="fill" style="width:64%"></div></div>
-                <div class="debate-counts"><span>64% Yes</span><span>1,204 in</span></div>
-              </div>
-              <div class="debate-card">
-                <div class="debate-tags">
-                  <span class="tag">Music</span><span class="tag">Live</span>
-                </div>
-                <p class="debate-q">"Concerts without phones, yes or no?"</p>
-                <div class="debate-bar"><div class="fill" style="width:78%"></div></div>
-                <div class="debate-counts"><span>78% Yes</span><span>3,891 in</span></div>
-              </div>
-              <div class="debate-card">
-                <div class="debate-tags">
-                  <span class="tag">Books</span><span class="tag">Reading</span>
-                </div>
-                <p class="debate-q">"Finish every book you start?"</p>
-                <div class="debate-bar"><div class="fill" style="width:41%"></div></div>
-                <div class="debate-counts"><span>41% Yes</span><span>612 in</span></div>
-              </div>
+    <!-- ========== 02 — DEBATES (carousel) ========== -->
+    <section class="section debates" id="debates">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">02</span>
+          <span class="s-label" data-i18n="debates.label">Debates</span>
+          <span class="s-rule"></span>
+          <span class="s-meta">For / Against · AI-tagged</span>
+        </div>
+
+        <div class="head-grid">
+          <h2 class="display" data-i18n="debates.title">
+            Debates with a <em class="serif">tag agent</em> behind the feed.
+          </h2>
+          <p class="lead" data-i18n="debates.lead">Three to five taxonomy slugs written onto every debate. A sibling-topic graph sends each one to the people who actually care about it.</p>
+        </div>
+
+        <div class="carousel image-carousel" id="debateCarousel" data-carousel="image">
+          <div class="carousel-stage">
+            <button class="car-btn prev" type="button" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+
+            <div class="carousel-track" id="debateTrack">
+              <div class="carousel-slide active"><img src="images/debate1.png" alt="Debate center grid"></div>
+              <div class="carousel-slide"><img src="images/debate2.png" alt="For / Against voting"></div>
+              <div class="carousel-slide"><img src="images/debate3.png" alt="Topic detail"></div>
+              <div class="carousel-slide"><img src="images/debate4.png" alt="Thread reactions"></div>
             </div>
+
+            <button class="car-btn next" type="button" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <div class="slide-meta">
+            <div class="sm-left">
+              <span class="sm-index"><em id="debateIndex">01</em> / 04</span>
+              <b id="debateTitle" data-i18n="debates.v1">Debate center grid</b>
+            </div>
+            <div class="sm-dots" id="debateDots" aria-hidden="true"></div>
+          </div>
+
+          <div class="carousel-thumbs" id="debateThumbs">
+            <button class="thumb active" data-index="0" aria-label="Debate 1">
+              <img src="images/debate1.png" alt="">
+            </button>
+            <button class="thumb" data-index="1" aria-label="Debate 2">
+              <img src="images/debate2.png" alt="">
+            </button>
+            <button class="thumb" data-index="2" aria-label="Debate 3">
+              <img src="images/debate3.png" alt="">
+            </button>
+            <button class="thumb" data-index="3" aria-label="Debate 4">
+              <img src="images/debate4.png" alt="">
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── 03 / Tide ─────────────────────────────────────────────────────── -->
-  <section class="tide-section hair-top" id="tide">
-    <div class="wrap">
-      <header class="sec-head reveal">
-        <div class="ordinal">03.</div>
-        <div>
-          <h2><span class="italic">Tide.</span> Breathe with a stranger.</h2>
-          <p class="sec-lead">A clinical-grade resonance pacer built into the app. Five seconds in, five seconds out, six breaths per minute. Try it here.</p>
+    <!-- ========== 03 — TIDE (image carousel) ========== -->
+    <section class="section tide" id="tide">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">03</span>
+          <span class="s-label" data-i18n="tide.label">Wellness</span>
+          <span class="s-rule"></span>
+          <span class="s-meta">6 BPM · Resonance</span>
         </div>
-      </header>
 
-      <div class="tide-stage reveal">
-        <div class="tide-canvas-wrap">
-          <canvas id="tide-canvas" aria-label="Interactive Tide pacer demo"></canvas>
-          <div class="tide-instr">Hold to inhale · release to exhale</div>
+        <div class="head-grid">
+          <h2 class="display" data-i18n="tide.title">
+            Tide — a <em class="serif">resonance</em> breathing pacer.
+          </h2>
+          <p class="lead" data-i18n="tide.lead">Five seconds in, five seconds out. Six breaths per minute. The protocol with the strongest known acute effect on heart-rate variability, built into the app.</p>
         </div>
-        <div class="tide-info">
-          <p class="pull">The pacer ring breathes on the protocol. Your warm disc follows your touch. The closer you track it, the more the screen glows.</p>
-          <dl>
-            <dt>Protocol</dt><dd>Resonant breathing at 6 BPM.</dd>
-            <dt>In / Out</dt><dd>Five seconds inhale, five seconds exhale. No hold phase.</dd>
-            <dt>Why it works</dt><dd>Maximises baroreflex gain. Lifts vagal tone. Shifts autonomic balance toward parasympathetic.</dd>
-            <dt>Cited</dt><dd>Lehrer &amp; Gevirtz, 2014. Steffen et al., 2017. Elliott, 2008.</dd>
-            <dt>Hardware</dt><dd>Soft haptic on each phase transition so you can keep rhythm with your eyes closed.</dd>
-          </dl>
+
+        <div class="carousel image-carousel" id="tideCarousel" data-carousel="image">
+          <div class="carousel-stage">
+            <button class="car-btn prev" type="button" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+
+            <div class="carousel-track" id="tideTrack">
+              <div class="carousel-slide active"><img src="images/tide1.png" alt="Tide at rest"></div>
+              <div class="carousel-slide"><img src="images/tide2.png" alt="Mid inhale"></div>
+              <div class="carousel-slide"><img src="images/tide3.png" alt="Full inhale"></div>
+              <div class="carousel-slide"><img src="images/tide4.png" alt="Mid exhale"></div>
+              <div class="carousel-slide"><img src="images/tide5.png" alt="Synced glow"></div>
+              <div class="carousel-slide"><img src="images/tide6.png" alt="Coherence bloom"></div>
+            </div>
+
+            <button class="car-btn next" type="button" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <div class="slide-meta">
+            <div class="sm-left">
+              <span class="sm-index"><em id="tideIndex">01</em> / 06</span>
+              <b data-i18n="tide.piece">Frame</b>
+            </div>
+            <div class="sm-dots" id="tideDots" aria-hidden="true"></div>
+          </div>
+
+          <div class="thumb-grid" id="tideThumbs"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── 04 / Offline four ─────────────────────────────────────────────── -->
-  <section class="wrap hair-top" id="offline">
-    <header class="sec-head reveal">
-      <div class="ordinal">04.</div>
-      <div>
-        <h2>When the network drops, <span class="italic">a small room opens.</span></h2>
-        <p class="sec-lead">Four games. No accounts, no servers, no scores beyond what's on the screen. They run when the rest of the app can't.</p>
-      </div>
-    </header>
+    <!-- ========== 04 — OFFLINE (skill-list style) ========== -->
+    <section class="section offline" id="offline">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">04</span>
+          <span class="s-label" data-i18n="offline.label">Offline</span>
+          <span class="s-rule"></span>
+          <span class="s-meta">On-device · no servers</span>
+        </div>
 
-    <div class="four reveal">
-      <div class="four-item">
-        <div class="ord"><span>i.</span><span>One player</span></div>
-        <h3><span class="italic">Net.</span></h3>
-        <p class="desc">Rotate to mend the network. The grid stitches itself shut as you go.</p>
-        <canvas id="net-canvas" class="mark" style="width:120px;height:120px;" aria-hidden="true"></canvas>
-      </div>
-      <div class="four-item">
-        <div class="ord"><span>ii.</span><span>One player</span></div>
-        <h3><span class="italic">Tide.</span></h3>
-        <p class="desc">Breathe with a stranger. The resonance pacer, lifted out of the app and given its own room.</p>
-      </div>
-      <div class="four-item">
-        <div class="ord"><span>iii.</span><span>Two to ten</span></div>
-        <h3><span class="italic">Spin.</span></h3>
-        <p class="desc">A wheel decides who must answer. Truth or dare, with a casino wheel that ratchets under your thumb.</p>
-      </div>
-      <div class="four-item">
-        <div class="ord"><span>iv.</span><span>Four to ten</span></div>
-        <h3><span class="italic">Faker.</span></h3>
-        <p class="desc">One of you knows nothing. The phone passes around. Two lines each. Then a vote, then a guess.</p>
-      </div>
-    </div>
+        <div class="head-grid">
+          <h2 class="display" data-i18n="offline.title">
+            When the network drops,<br>
+            a small <em class="serif">room</em> opens.
+          </h2>
+          <p class="lead" data-i18n="offline.lead">Four games. No accounts, no servers, no scores beyond what's on the screen. They run when the rest of the app can't.</p>
+        </div>
 
-    <div style="margin-top:48px;" class="reveal">
-      <a class="btn" href="offline.html">Open the offline hub</a>
-    </div>
-  </section>
-
-  <!-- ── 05 / Pro ─────────────────────────────────────────────────────── -->
-  <section class="wrap hair-top" id="pro">
-    <header class="sec-head reveal">
-      <div class="ordinal">05.</div>
-      <div>
-        <h2><span class="italic">Connect Pro.</span> Same app, with room to move.</h2>
-        <p class="sec-lead">Ads keep the free tier free. Pro turns them off and opens the features that need a bit more room.</p>
-      </div>
-    </header>
-
-    <div class="plans reveal">
-      <div class="plan">
-        <h3>Free</h3>
-        <div class="price">€0<small>/forever</small></div>
-        <p style="color:var(--ink-mute);font-size:14px;">Everything that matters. Native, interstitial, and house ads support the work.</p>
-        <ul>
-          <li>Stories, Debates, Tide</li>
-          <li>The offline four</li>
-          <li>Quizzes from posts and shorts</li>
-          <li>Spotlight and feed</li>
+        <ul class="skill-list">
+          <li class="skill-row">
+            <span class="sr-num">01</span>
+            <div class="sr-title">
+              <b data-i18n="offline.net.t">Net.</b>
+              <p data-i18n="offline.net.p">Rotate to mend the network. An endless brain puzzle on a procedural grid, rooted in the Connect mark. Wider, twistier with every level.</p>
+            </div>
+            <div class="sr-tags">
+              <span>1 player</span><span>Procedural</span><span>Endless</span><span>On-device</span>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="sr-num">02</span>
+            <div class="sr-title">
+              <b data-i18n="offline.tide.t">Tide.</b>
+              <p data-i18n="offline.tide.p">Breathe with a stranger. The resonance pacer, lifted out of the app into its own room. Five seconds in, five seconds out.</p>
+            </div>
+            <div class="sr-tags">
+              <span>1 player</span><span>Resonance</span><span>6 BPM</span><span>Haptic</span>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="sr-num">03</span>
+            <div class="sr-title">
+              <b data-i18n="offline.spin.t">Spin.</b>
+              <p data-i18n="offline.spin.p">A wheel decides who must answer. Truth or dare, with a casino-style ratcheting wheel that decelerates over seven seconds.</p>
+            </div>
+            <div class="sr-tags">
+              <span>2 to 10</span><span>Same phone</span><span>Truth / Dare</span><span>Haptic</span>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="sr-num">04</span>
+            <div class="sr-title">
+              <b data-i18n="offline.faker.t">Faker.</b>
+              <p data-i18n="offline.faker.p">One of you knows nothing. The phone passes around. Two lines each, then a vote, then the faker's one guess.</p>
+            </div>
+            <div class="sr-tags">
+              <span>4 to 10</span><span>Same phone</span><span>Drawing</span><span>Social deduction</span>
+            </div>
+          </li>
         </ul>
-        <a class="btn" href="pro.html">Compare plans</a>
       </div>
-      <div class="plan featured">
-        <h3><span class="italic">Pro</span></h3>
-        <div class="price">€4.99<small>/month</small></div>
-        <p style="color:var(--ink-mute);font-size:14px;">No ads, anywhere. Higher upload ceilings. Early access to new things.</p>
-        <ul>
-          <li>Everything in Free</li>
-          <li>No ads, no house promos</li>
-          <li>Higher upload limits</li>
-          <li>Early access to new features</li>
-          <li>A small Pro badge, if you want it</li>
-        </ul>
-        <a class="btn btn-primary" href="pro.html">See Pro details</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── Closing manifesto ────────────────────────────────────────────── -->
-  <section class="manifesto wrap hair-top reveal">
-    <p>
-      Connect is being built one feature at a time.
-      <span class="mute">It's not finished, and that's the point.</span>
-    </p>
-  </section>
+    <!-- ========== 05 — PRO ========== -->
+    <section class="section pro" id="pro">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">05</span>
+          <span class="s-label" data-i18n="pro.label">Pricing</span>
+          <span class="s-rule"></span>
+          <span class="s-meta">Optional · cancel anytime</span>
+        </div>
 
-</main>
+        <div class="head-grid">
+          <h2 class="display" data-i18n="pro.title">
+            Connect Pro. Same app,<br>
+            with room to <em class="serif">move</em>.
+          </h2>
+          <p class="lead" data-i18n="pro.lead">Ads keep the free tier free. Pro turns them off and opens the parts that need a bit more room. Nothing essential lives behind the paywall.</p>
+        </div>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-col foot-col-brand">
-        <p class="foot-brand">Connect<span class="dot">.</span></p>
-        <p style="color:var(--ink-mute);font-size:14px;margin-top:18px;max-width:340px;">A small social app, made on purpose. iOS and Android, summer 2026.</p>
+        <div class="career-grid">
+          <div class="career-col">
+            <h3 class="col-title"><span data-i18n="pro.free">Free</span><em>€0</em></h3>
+            <ol class="tl">
+              <li>
+                <span class="tl-year">All</span>
+                <div><b>Stories, Debates, Tide, Spotlight</b><p>Every core feature. Native, interstitial and house ads support the work.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">All</span>
+                <div><b>Offline four</b><p>Net, Tide, Spin, Faker. On-device, identical to Pro.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">All</span>
+                <div><b>DMs &amp; voice messages</b><p>Direct messages with record and scrub.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">All</span>
+                <div><b>Quizzes from posts</b><p>Three to five questions, no padding, adaptive.</p></div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="career-col">
+            <h3 class="col-title"><span data-i18n="pro.pro">Pro</span><em>€4.99/mo</em></h3>
+            <ol class="tl">
+              <li>
+                <span class="tl-year">No ads</span>
+                <div><b>Nothing in your feed</b><p>No native, no interstitial, no app-open ads, no house promos.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">More</span>
+                <div><b>Higher upload limits</b><p>Bigger stories and posts. More room for what you're making.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">Early</span>
+                <div><b>Early access</b><p>New features land in beta on Pro accounts first.</p></div>
+              </li>
+              <li>
+                <span class="tl-year">Badge</span>
+                <div><b>Small Pro badge</b><p>Optional. Off by default.</p></div>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
-      <div class="foot-col">
-        <h5>Product</h5>
-        <a href="features.html">Features</a>
-        <a href="tide.html">Tide</a>
-        <a href="offline.html">Offline</a>
-        <a href="pro.html">Pro</a>
+    </section>
+
+    <!-- ========== 06 — ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">06</span>
+          <span class="s-label" data-i18n="about.label">The maker</span>
+          <span class="s-rule"></span>
+        </div>
+
+        <div class="about-grid">
+          <figure class="portrait">
+            <img src="images/i1.jpg" alt="Mahdi Saiah portrait">
+            <figcaption>Mahdi Saiah · Paris</figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <h2 class="display" data-i18n="about.title">
+              A small social app, made by <em class="serif">one</em> person, on purpose.
+            </h2>
+            <p class="lead" data-i18n="about.lead">Built by Mahdi, in Paris. No team, no pitch deck, no public roadmap. One careful thing at a time. Connect is a Flutter app on iOS and Android, with Supabase as the backend and a Groq agent powering the debate tag system.</p>
+
+            <dl class="about-facts">
+              <div>
+                <dt data-i18n="about.based">Based in</dt>
+                <dd>Paris, France</dd>
+              </div>
+              <div>
+                <dt data-i18n="about.origin">Origin</dt>
+                <dd>Sousse, Tunisia</dd>
+              </div>
+              <div>
+                <dt data-i18n="about.languages">Languages</dt>
+                <dd>FR · EN · AR</dd>
+              </div>
+              <div>
+                <dt data-i18n="about.statuslabel">Status</dt>
+                <dd><span class="status-dot"></span><span data-i18n="about.status">Launching May 31, 2026</span></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </div>
-      <div class="foot-col">
-        <h5>Connect</h5>
-        <a href="manifesto.html">Manifesto</a>
-        <a href="about.html">About</a>
-        <a href="https://github.com/mahdisaiah">GitHub</a>
+    </section>
+
+    <!-- ========== 07 — CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="s-head">
+          <span class="s-num">07</span>
+          <span class="s-label" data-i18n="contact.label">Get the app</span>
+          <span class="s-rule"></span>
+        </div>
+
+        <h2 class="display center" data-i18n="contact.title">
+          Stay close. <em class="serif">Sign up</em> for launch.
+        </h2>
+        <p class="lead center" data-i18n="contact.lead">Drop your email for a single launch-day note. Or follow the project on the links below.</p>
+
+        <div class="contact-cards">
+          <a href="mailto:hello@connect.app?subject=Connect%20launch%20signup" class="c-card">
+            <span class="c-kind" data-i18n="contact.email">Email signup</span>
+            <b>hello@connect.app</b>
+            <em>→</em>
+          </a>
+          <a href="https://www.linkedin.com/in/mahdi-sa%C3%AFah-901a05303/" target="_blank" rel="noopener" class="c-card">
+            <span class="c-kind">LinkedIn</span>
+            <b>mahdi-saïah</b>
+            <em>↗</em>
+          </a>
+          <a href="https://github.com/mahdisaiah/connect" target="_blank" rel="noopener" class="c-card">
+            <span class="c-kind">GitHub</span>
+            <b>@mahdisaiah/connect</b>
+            <em>↗</em>
+          </a>
+          <a href="https://mahdisaiah.github.io" target="_blank" rel="noopener" class="c-card cv-card">
+            <span class="c-kind" data-i18n="contact.cv">Portfolio</span>
+            <b>mahdisaiah.github.io</b>
+            <em>↗</em>
+          </a>
+        </div>
+
+        <footer class="site-footer">
+          <span>© <span id="year"></span> Connect.</span>
+          <span>Paris · <span data-i18n="contact.available">Launching May 2026</span></span>
+        </footer>
       </div>
-      <div class="foot-col">
-        <h5>Legal</h5>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Connect.</span>
-      <span>Built by Mahdi · Paris</span>
-    </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button id="closeLightbox" aria-label="Close">×</button>
+    <img id="lightboxImg" alt="Expanded screen">
   </div>
-</footer>
 
-<script src="assets/js/site.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
