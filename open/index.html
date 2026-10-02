@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Connect, For Real</title>
 <meta name="description" content="Someone shared this with you on Connect. Open it in the app, or get Connect on the App Store.">
-<meta name="theme-color" content="#004455">
+<meta name="theme-color" content="#000000">
 <meta name="robots" content="noindex">
 <meta property="og:site_name" content="Connect, For Real">
 <meta property="og:title" content="See this on Connect">
@@ -20,21 +20,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --teal: #004455;
     --ink: #0b0b0c;
-    --muted: #5d6466;
+    --muted: #6b6b6b;
     --paper: #ffffff;
-    --ground: #eef2f2;
-    --line: rgba(0, 0, 0, 0.12);
-    --button-ink: #ffffff;
+    --ground: #f2f2f2;
+    --line: rgba(0, 0, 0, 0.20);
+    --solid: #0b0b0c;
+    --on-solid: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ink: #f2f4f4;
-      --muted: #9aa3a5;
-      --paper: #121618;
-      --ground: #070a0b;
-      --line: rgba(255, 255, 255, 0.14);
+      --ink: #f2f2f2;
+      --muted: #9a9a9a;
+      --paper: #141414;
+      --ground: #000000;
+      --line: rgba(255, 255, 255, 0.20);
+      --solid: #f2f2f2;
+      --on-solid: #0b0b0c;
     }
   }
   * { box-sizing: border-box; }
@@ -66,11 +68,8 @@
     font-weight: 700;
     font-size: 30px;
     letter-spacing: 0.2px;
-    color: var(--teal);
+    color: var(--ink);
     margin: 0 0 26px;
-  }
-  @media (prefers-color-scheme: dark) {
-    .wordmark { color: #7fb7c4; }
   }
   .kind {
     font-size: 11px;
@@ -105,7 +104,7 @@
     background: transparent;
   }
   .btn + .btn { margin-top: 10px; }
-  .btn.primary { background: var(--teal); border-color: var(--teal); color: var(--button-ink); }
+  .btn.primary { background: var(--solid); border-color: var(--solid); color: var(--on-solid); }
   .btn svg { width: 18px; height: 18px; flex: none; }
   .hint { margin: 18px 0 0; font-size: 13.5px; color: var(--muted); }
   .hint[hidden] { display: none; }
