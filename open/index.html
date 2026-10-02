@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Connect, For Real</title>
+<meta name="description" content="Someone shared this with you on Connect. Open it in the app, or get Connect on the App Store.">
+<meta name="theme-color" content="#004455">
+<meta name="robots" content="noindex">
+<meta property="og:site_name" content="Connect, For Real">
+<meta property="og:title" content="See this on Connect">
+<meta property="og:description" content="Open it in Connect, or get the app on the App Store.">
+<meta property="og:image" content="https://mahdisaiah.github.io/connect/images/logo.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="apple-itunes-app" content="app-id=6782110379">
+<link rel="icon" href="../images/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #004455;
+    --ink: #0b0b0c;
+    --muted: #5d6466;
+    --paper: #ffffff;
+    --ground: #eef2f2;
+    --line: rgba(0, 0, 0, 0.12);
+    --button-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f2f4f4;
+      --muted: #9aa3a5;
+      --paper: #121618;
+      --ground: #070a0b;
+      --line: rgba(255, 255, 255, 0.14);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+    background: var(--paper);
+    border: 1.2px solid var(--line);
+    border-radius: 24px;
+    padding: 32px 24px 24px;
+    text-align: center;
+  }
+  .wordmark {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.2px;
+    color: var(--teal);
+    margin: 0 0 26px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .wordmark { color: #7fb7c4; }
+  }
+  .kind {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+  }
+  .lead { margin: 0 0 26px; color: var(--muted); font-size: 15.5px; }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 54px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1.2px solid var(--line);
+    color: var(--ink);
+    background: transparent;
+  }
+  .btn + .btn { margin-top: 10px; }
+  .btn.primary { background: var(--teal); border-color: var(--teal); color: var(--button-ink); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .hint { margin: 18px 0 0; font-size: 13.5px; color: var(--muted); }
+  .hint[hidden] { display: none; }
+  footer { margin-top: 22px; font-size: 12.5px; color: var(--muted); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="wordmark">Connect.</p>
+  <p class="kind" id="kind">Connect</p>
+  <h1 id="title">Someone shared this with you</h1>
+  <p class="lead" id="lead">See it in the Connect app.</p>
+
+  <a class="btn primary" id="open" href="connect://">
+    <span id="openLabel">Open in Connect</span>
+  </a>
+  <a class="btn" id="store" href="https://apps.apple.com/app/id6782110379">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.27 1.88-3.32-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.33-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
+    <span id="storeLabel">Get Connect on the App Store</span>
+  </a>
+  <p class="hint" id="hint">New to Connect? Get the app, sign in, then open this link again.</p>
+  <p class="hint" id="android" hidden>Connect for Android is coming soon on Google Play.</p>
+</main>
+
+<script>
+(function () {
+  // Flip to true once the Play Store listing is live.
+  var PLAY_LIVE = false;
+  var PLAY_URL = "https://play.google.com/store/apps/details?id=com.getconnect.app";
+
+  var fr = /^fr\b/i.test(navigator.language || "");
+  var text = fr ? {
+    kindProfile: "Profil",
+    kindPost: "Publication",
+    profileTitle: "{name} est sur Connect",
+    profileLead: "Ouvre son profil dans l'app pour le suivre et lui écrire.",
+    postTitle: "On t'a partagé une publication",
+    postLead: "Ouvre-la dans Connect pour la voir, réagir et commenter.",
+    plainTitle: "On t'a partagé quelque chose",
+    plainLead: "Ouvre-le dans l'app Connect.",
+    open: "Ouvrir dans Connect",
+    store: "Télécharger Connect sur l'App Store",
+    play: "Télécharger Connect sur Google Play",
+    hint: "Nouveau sur Connect ? Télécharge l'app, connecte-toi, puis rouvre ce lien.",
+    android: "Connect arrive bientôt sur Google Play."
+  } : {
+    kindProfile: "Profile",
+    kindPost: "Post",
+    profileTitle: "{name} is on Connect",
+    profileLead: "Open their profile in the app to follow and message them.",
+    postTitle: "Someone shared a post with you",
+    postLead: "Open it in Connect to see it, react and comment.",
+    plainTitle: "Someone shared this with you",
+    plainLead: "See it in the Connect app.",
+    open: "Open in Connect",
+    store: "Get Connect on the App Store",
+    play: "Get Connect on Google Play",
+    hint: "New to Connect? Get the app, sign in, then open this link again.",
+    android: "Connect for Android is coming soon on Google Play."
+  };
+  if (fr) document.documentElement.lang = "fr";
+
+  var q = new URLSearchParams(location.search);
+  var username = (q.get("u") || "").replace(/^@/, "").trim();
+  var userId = (q.get("id") || "").trim();
+  var postId = (q.get("p") || "").trim();
+  var uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  var handle = /^[A-Za-z0-9._]{1,40}$/;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var deep = null;
+
+  if (uuid.test(postId)) {
+    deep = "connect://post?id=" + encodeURIComponent(postId);
+    $("kind").textContent = text.kindPost;
+    $("title").textContent = text.postTitle;
+    $("lead").textContent = text.postLead;
+  } else if (handle.test(username) || uuid.test(userId)) {
+    deep = handle.test(username)
+      ? "connect://profile?username=" + encodeURIComponent(username)
+      : "connect://profile?userId=" + encodeURIComponent(userId);
+    $("kind").textContent = text.kindProfile;
+    $("title").textContent = text.profileTitle.replace(
+      "{name}", handle.test(username) ? "@" + username : (fr ? "Quelqu'un" : "Someone"));
+    $("lead").textContent = text.profileLead;
+  } else {
+    $("kind").textContent = "Connect";
+    $("title").textContent = text.plainTitle;
+    $("lead").textContent = text.plainLead;
+  }
+
+  $("openLabel").textContent = text.open;
+  $("storeLabel").textContent = text.store;
+  $("hint").textContent = text.hint;
+  $("android").textContent = text.android;
+  document.title = $("title").textContent + " · Connect";
+
+  if (deep) {
+    $("open").setAttribute("href", deep);
+  } else {
+    $("open").remove();
+  }
+
+  var isAndroid = /android/i.test(navigator.userAgent || "");
+  if (isAndroid) {
+    if (PLAY_LIVE) {
+      $("store").setAttribute("href", PLAY_URL);
+      $("storeLabel").textContent = text.play;
+      $("store").querySelector("svg").remove();
+    } else {
+      $("store").remove();
+      $("hint").hidden = true;
+      $("android").hidden = false;
+    }
+  }
+})();
+</script>
+</body>
+</html>
