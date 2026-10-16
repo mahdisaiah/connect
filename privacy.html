@@ -37,7 +37,7 @@
     <p class="label" data-fr="Confidentialité">Privacy</p>
     <h1 class="display" data-fr="Politique de <em>confidentialité</em>">Privacy <em>policy</em></h1>
     <p class="lead" data-fr="Comment Connect traite tes informations et t'aide à garder le contrôle sur ta vie privée.">How Connect handles your information and helps you control your privacy.</p>
-    <p class="updated" data-fr="Dernière mise à jour : 28 avril 2026">Last updated: April 28, 2026</p>
+    <p class="updated" data-fr="Dernière mise à jour : 16 octobre 2026">Last updated: October 16, 2026</p>
   </section>
   <div class="wrap doc" data-l="en">
     <aside class="toc" aria-label="On this page">
@@ -49,6 +49,8 @@
         <li><a href="#legal">Legal reasons for using data</a></li>
         <li><a href="#sharing">When information is shared</a></li>
         <li><a href="#providers">Service providers and hosting</a></li>
+        <li><a href="#ai">AI features</a></li>
+        <li><a href="#youtube">Videos from YouTube</a></li>
         <li><a href="#messages">Messages and moderation</a></li>
         <li><a href="#protect">How we protect your information</a></li>
         <li><a href="#controls">Your controls</a></li>
@@ -70,6 +72,8 @@
         <li><a href="#legal">Legal reasons for using data</a></li>
         <li><a href="#sharing">When information is shared</a></li>
         <li><a href="#providers">Service providers and hosting</a></li>
+        <li><a href="#ai">AI features</a></li>
+        <li><a href="#youtube">Videos from YouTube</a></li>
         <li><a href="#messages">Messages and moderation</a></li>
         <li><a href="#protect">How we protect your information</a></li>
         <li><a href="#controls">Your controls</a></li>
@@ -98,7 +102,7 @@
         <p>We collect information you provide, information created when you use Connect, and limited technical information needed to run, secure and improve the app.</p>
         <ul>
           <li><b>Account information.</b> Your email, username, display name, profile photo, bio and account settings.</li>
-          <li><b>Profile and public content.</b> Posts, stories, debates, comments, mood updates, profile information and media you choose to share.</li>
+          <li><b>Profile and public content.</b> Posts, debates, comments, mood updates, profile information and media you choose to share.</li>
           <li><b>Messages.</b> Messages and shared media are processed so they can be delivered, displayed, synced and protected from abuse or technical issues.</li>
           <li><b>Activity information.</b> Follows, searches, reports, blocks, preferences, interactions with content and navigation inside the app.</li>
           <li><b>Device and technical information.</b> App version, device type, operating system, language, crash information, security logs and performance data.</li>
@@ -110,7 +114,7 @@
         <p>We use your information to provide Connect, improve your experience, protect users and comply with legal obligations.</p>
         <ul>
           <li>To create, manage and secure your account.</li>
-          <li>To show your feed, profile, posts, stories, debates, comments, messages, notifications and search results.</li>
+          <li>To show your feed, profile, posts, debates, comments, messages, notifications and search results.</li>
           <li>To personalize parts of the app, such as suggested profiles, topics, posts or discovery features.</li>
           <li>To deliver messages and notifications.</li>
           <li>To help detect spam, abuse, fake accounts, security risks and violations of our Terms.</li>
@@ -142,12 +146,35 @@
       </section>
       <section id="providers">
         <h2>Service providers and hosting</h2>
-        <p>Connect uses third-party service providers to operate the app. For example, Connect uses Supabase for backend services such as authentication, database, storage and infrastructure.</p>
-        <p>These providers may process personal data only as needed to provide their services to Connect, protect their systems, comply with law or follow their own legal obligations.</p>
+        <p>Connect uses these service providers to run the app. Each one gets only the data it needs for its job.</p>
         <ul>
-          <li>We choose providers that offer security and privacy protections appropriate for the services they provide.</li>
+          <li><b>Supabase:</b> accounts, database, file storage and backend functions.</li>
+          <li><b>Google Firebase:</b> push notifications and crash reports.</li>
+          <li><b>Apple and Google:</b> Sign in with Apple, Sign in with Google and notification delivery, when you use them.</li>
+          <li><b>YouTube:</b> videos in Connect play in YouTube's official player (see "Videos from YouTube").</li>
+          <li><b>Groq, Mistral, SambaNova and OpenRouter:</b> the AI behind Connect's AI features (see "AI features").</li>
+          <li><b>Wikipedia, Apple Music, MET Norway, Esri and OpenStreetMap:</b> fact checks for ConnectAI answers, song search and previews, weather, maps and place search. Your phone contacts them directly, so they see your IP address.</li>
           <li>We do not allow service providers to sell your personal data.</li>
           <li>Where required, we use contractual safeguards for data protection.</li>
+        </ul>
+      </section>
+      <section id="ai">
+        <h2>AI features</h2>
+        <p>Some features use AI: ConnectAI, Ask this video, the grammar fix in chat, and the daily debates and video descriptions written for Connect's own channels.</p>
+        <ul>
+          <li>When you use an AI feature, what you send (your question, your draft, or a video's public details) goes to the AI provider so it can answer. Only what the feature needs is sent.</li>
+          <li>Before ConnectAI answers a factual question, your phone may look up a short search phrase on Wikipedia. Your conversation is never sent to Wikipedia.</li>
+          <li>If you add your own AI key, your requests go straight from your phone to the provider you chose, under that provider's terms.</li>
+          <li>Connect does not train AI models on your content. Each provider handles requests under its own privacy policy.</li>
+          <li>AI can be wrong. Debates and other content made by AI are labeled "Made by AI".</li>
+        </ul>
+      </section>
+      <section id="youtube">
+        <h2>Videos from YouTube</h2>
+        <p>Connect uses YouTube API Services to find, show and check videos. When you watch a YouTube video in Connect, it plays in YouTube's player, and Google may collect data under the Google Privacy Policy (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>).</p>
+        <p>By watching YouTube videos in Connect, you agree to the YouTube Terms of Service (<a href="https://www.youtube.com/t/terms">youtube.com/t/terms</a>).</p>
+        <ul>
+          <li>Connect keeps only the video details it needs, and refreshes or deletes them on the schedule YouTube requires.</li>
         </ul>
       </section>
       <section id="messages">
@@ -155,7 +182,7 @@
         <p>Private messages are intended for conversations between users. We do not sell message content, and we do not use private messages to sell advertising.</p>
         <p>To keep Connect safe, message-related information may be processed when needed to deliver messages, investigate reports, prevent abuse, fix technical issues or comply with the law.</p>
         <ul>
-          <li>Users can report messages or conversations that may violate Connect's rules.</li>
+          <li>Users can report messages or conversations that may violate Connect's rules. A report includes the reason and any details you choose to add.</li>
           <li>Moderation access is limited to safety, support, legal or abuse-prevention purposes.</li>
           <li>Sensitive administrative actions should be restricted, logged and reviewed.</li>
         </ul>
@@ -176,7 +203,7 @@
         <p>You can manage many privacy choices directly in the app.</p>
         <ul>
           <li>Update your profile information from your account settings.</li>
-          <li>Control what you share through your posts, stories, debates, mood updates and profile.</li>
+          <li>Control what you share through your posts, debates, mood updates and profile.</li>
           <li>Manage available privacy settings for your account and content.</li>
           <li>Block users you do not want to interact with.</li>
           <li>Report content, accounts or messages that may violate Connect's rules.</li>
@@ -193,6 +220,7 @@
           <li>You can ask us to delete your account and associated personal data, subject to legal, safety and abuse-prevention exceptions.</li>
           <li>You can withdraw consent where processing is based on consent, such as optional location permissions.</li>
           <li>You can contact us if you have questions about how your data is used.</li>
+          <li>You can file a complaint with the CNIL (<a href="https://www.cnil.fr">cnil.fr</a>), the French data protection authority.</li>
         </ul>
       </section>
       <section id="retention">
@@ -207,8 +235,7 @@
       </section>
       <section id="age">
         <h2>Age requirements</h2>
-        <p>Connect is not intended for children below the minimum age required by applicable law.</p>
-        <p>In the European Union, Connect is intended for users who are at least 15 years old, unless a different rule applies in your country or valid parental consent is required by law.</p>
+        <p>Connect is for adults aged 18 and over.</p>
         <ul>
           <li>If we learn that an account was created by someone below the required age, we may close the account and delete the associated information.</li>
           <li>We may take reasonable steps to handle age-related reports while respecting privacy.</li>
@@ -217,6 +244,7 @@
       <section id="transfers">
         <h2>International data transfers</h2>
         <p>Connect may use service providers or infrastructure located in different countries. When personal data is transferred internationally, we use safeguards required by applicable law, such as appropriate contractual protections where needed.</p>
+        <p>Some providers, like Google, Apple, Groq, SambaNova and OpenRouter, are based in the United States. These transfers rely on the EU-US Data Privacy Framework when the provider is certified, or on the European Commission's standard contractual clauses.</p>
       </section>
       <section id="third">
         <h2>Third-party links and embedded content</h2>
@@ -243,6 +271,7 @@
       </section>
       <section id="contact">
         <h2>Contact</h2>
+        <p>Connect is run from France by its founder, who is responsible for your personal data (the "data controller").</p>
         <p>If you have questions about this policy or want to make a privacy request, contact us from Settings &rarr; Support &rarr; Report a problem and include "Privacy" in your message.</p>
         <p>You can also contact us at: <a href="mailto:connectappfr@gmail.com">connectappfr@gmail.com</a>.</p>
       </section>
@@ -258,6 +287,8 @@
         <li><a href="#fr-legal">Les bases légales</a></li>
         <li><a href="#fr-sharing">Quand des informations sont partagées</a></li>
         <li><a href="#fr-providers">Prestataires et hébergement</a></li>
+        <li><a href="#fr-ai">Fonctionnalités d'IA</a></li>
+        <li><a href="#fr-youtube">Vidéos YouTube</a></li>
         <li><a href="#fr-messages">Messages et modération</a></li>
         <li><a href="#fr-protect">Comment nous protégeons tes informations</a></li>
         <li><a href="#fr-controls">Tes réglages</a></li>
@@ -279,6 +310,8 @@
         <li><a href="#fr-legal">Les bases légales</a></li>
         <li><a href="#fr-sharing">Quand des informations sont partagées</a></li>
         <li><a href="#fr-providers">Prestataires et hébergement</a></li>
+        <li><a href="#fr-ai">Fonctionnalités d'IA</a></li>
+        <li><a href="#fr-youtube">Vidéos YouTube</a></li>
         <li><a href="#fr-messages">Messages et modération</a></li>
         <li><a href="#fr-protect">Comment nous protégeons tes informations</a></li>
         <li><a href="#fr-controls">Tes réglages</a></li>
@@ -307,7 +340,7 @@
         <p>Nous collectons les informations que tu fournis, celles créées quand tu utilises Connect, et quelques informations techniques nécessaires pour faire tourner, sécuriser et améliorer l'app.</p>
         <ul>
           <li><b>Informations de compte.</b> Ton e-mail, ton nom d'utilisateur, ton nom affiché, ta photo de profil, ta bio et les réglages de ton compte.</li>
-          <li><b>Profil et contenus publics.</b> Les publications, stories, débats, commentaires, humeurs, informations de profil et médias que tu choisis de partager.</li>
+          <li><b>Profil et contenus publics.</b> Les publications, débats, commentaires, humeurs, informations de profil et médias que tu choisis de partager.</li>
           <li><b>Messages.</b> Les messages et médias partagés sont traités pour pouvoir être envoyés, affichés, synchronisés et protégés contre les abus ou les problèmes techniques.</li>
           <li><b>Activité.</b> Abonnements, recherches, signalements, blocages, préférences, interactions avec les contenus et navigation dans l'app.</li>
           <li><b>Appareil et informations techniques.</b> Version de l'app, type d'appareil, système d'exploitation, langue, rapports de plantage, journaux de sécurité et données de performance.</li>
@@ -319,7 +352,7 @@
         <p>Nous utilisons tes informations pour faire fonctionner Connect, améliorer ton expérience, protéger les utilisateurs et respecter nos obligations légales.</p>
         <ul>
           <li>Pour créer, gérer et sécuriser ton compte.</li>
-          <li>Pour afficher ton feed, ton profil, les publications, stories, débats, commentaires, messages, notifications et résultats de recherche.</li>
+          <li>Pour afficher ton feed, ton profil, les publications, débats, commentaires, messages, notifications et résultats de recherche.</li>
           <li>Pour personnaliser certaines parties de l'app, comme les profils, sujets, publications ou fonctionnalités de découverte suggérés.</li>
           <li>Pour envoyer les messages et les notifications.</li>
           <li>Pour aider à détecter le spam, les abus, les faux comptes, les risques de sécurité et les violations de nos Conditions.</li>
@@ -351,12 +384,35 @@
       </section>
       <section id="fr-providers">
         <h2>Prestataires et hébergement</h2>
-        <p>Connect fait appel à des prestataires tiers pour faire fonctionner l'app. Par exemple, Connect utilise Supabase pour les services backend comme l'authentification, la base de données, le stockage et l'infrastructure.</p>
-        <p>Ces prestataires ne peuvent traiter des données personnelles que dans la mesure nécessaire pour fournir leurs services à Connect, protéger leurs systèmes, respecter la loi ou leurs propres obligations légales.</p>
+        <p>Connect fait appel à ces prestataires pour faire fonctionner l'app. Chacun ne reçoit que les données nécessaires à son rôle.</p>
         <ul>
-          <li>Nous choisissons des prestataires qui offrent des protections de sécurité et de confidentialité adaptées aux services fournis.</li>
+          <li><b>Supabase :</b> comptes, base de données, stockage de fichiers et fonctions backend.</li>
+          <li><b>Google Firebase :</b> notifications push et rapports de plantage.</li>
+          <li><b>Apple et Google :</b> Se connecter avec Apple, Se connecter avec Google et envoi des notifications, quand tu les utilises.</li>
+          <li><b>YouTube :</b> les vidéos dans Connect sont lues dans le lecteur officiel de YouTube (voir « Vidéos YouTube »).</li>
+          <li><b>Groq, Mistral, SambaNova et OpenRouter :</b> l'IA derrière les fonctionnalités d'IA de Connect (voir « Fonctionnalités d'IA »).</li>
+          <li><b>Wikipédia, Apple Music, MET Norway, Esri et OpenStreetMap :</b> vérification des faits dans les réponses de ConnectAI, recherche et extraits de musique, météo, cartes et recherche de lieux. Ton téléphone les contacte directement, ils voient donc ton adresse IP.</li>
           <li>Nous n'autorisons pas nos prestataires à vendre tes données personnelles.</li>
           <li>Lorsque c'est requis, nous utilisons des garanties contractuelles pour la protection des données.</li>
+        </ul>
+      </section>
+      <section id="fr-ai">
+        <h2>Fonctionnalités d'IA</h2>
+        <p>Certaines fonctionnalités utilisent l'IA : ConnectAI, Demander à la vidéo, la correction de grammaire dans le chat, ainsi que les débats du jour et les descriptions de vidéos écrits pour les chaînes de Connect.</p>
+        <ul>
+          <li>Quand tu utilises une fonctionnalité d'IA, ce que tu envoies (ta question, ton brouillon ou les informations publiques d'une vidéo) part chez le fournisseur d'IA pour qu'il puisse répondre. Seul ce dont la fonctionnalité a besoin est envoyé.</li>
+          <li>Avant que ConnectAI réponde à une question factuelle, ton téléphone peut chercher une courte expression sur Wikipédia. Ta conversation n'est jamais envoyée à Wikipédia.</li>
+          <li>Si tu ajoutes ta propre clé d'IA, tes demandes partent directement de ton téléphone vers le fournisseur choisi, selon ses conditions.</li>
+          <li>Connect n'entraîne pas de modèles d'IA sur tes contenus. Chaque fournisseur traite les demandes selon sa propre politique de confidentialité.</li>
+          <li>L'IA peut se tromper. Les débats et autres contenus créés par l'IA portent la mention « Fait par l'IA ».</li>
+        </ul>
+      </section>
+      <section id="fr-youtube">
+        <h2>Vidéos YouTube</h2>
+        <p>Connect utilise les services d'API YouTube pour trouver, afficher et vérifier des vidéos. Quand tu regardes une vidéo YouTube dans Connect, elle est lue dans le lecteur de YouTube, et Google peut collecter des données selon les Règles de confidentialité de Google (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>).</p>
+        <p>En regardant des vidéos YouTube dans Connect, tu acceptes les Conditions d'utilisation de YouTube (<a href="https://www.youtube.com/t/terms">youtube.com/t/terms</a>).</p>
+        <ul>
+          <li>Connect ne garde que les informations de vidéo dont il a besoin, et les met à jour ou les supprime au rythme exigé par YouTube.</li>
         </ul>
       </section>
       <section id="fr-messages">
@@ -364,7 +420,7 @@
         <p>Les messages privés sont destinés aux conversations entre utilisateurs. Nous ne vendons pas le contenu des messages et nous n'utilisons pas les messages privés pour vendre de la publicité.</p>
         <p>Pour garder Connect sûr, des informations liées aux messages peuvent être traitées quand c'est nécessaire pour envoyer les messages, examiner des signalements, prévenir les abus, corriger des problèmes techniques ou respecter la loi.</p>
         <ul>
-          <li>Les utilisateurs peuvent signaler des messages ou des conversations qui pourraient enfreindre les règles de Connect.</li>
+          <li>Les utilisateurs peuvent signaler des messages ou des conversations qui pourraient enfreindre les règles de Connect. Un signalement contient la raison et les détails que tu choisis d'ajouter.</li>
           <li>L'accès de modération est limité à la sécurité, l'aide aux utilisateurs, les obligations légales ou la prévention des abus.</li>
           <li>Les actions administratives sensibles doivent être restreintes, journalisées et vérifiées.</li>
         </ul>
@@ -385,7 +441,7 @@
         <p>Tu peux gérer beaucoup de choix de confidentialité directement dans l'app.</p>
         <ul>
           <li>Modifier les informations de ton profil depuis les réglages de ton compte.</li>
-          <li>Contrôler ce que tu partages via tes publications, stories, débats, humeurs et ton profil.</li>
+          <li>Contrôler ce que tu partages via tes publications, débats, humeurs et ton profil.</li>
           <li>Gérer les réglages de confidentialité disponibles pour ton compte et tes contenus.</li>
           <li>Bloquer les utilisateurs avec qui tu ne veux pas interagir.</li>
           <li>Signaler des contenus, comptes ou messages qui pourraient enfreindre les règles de Connect.</li>
@@ -402,6 +458,7 @@
           <li>Tu peux nous demander de supprimer ton compte et les données personnelles associées, sous réserve des exceptions légales, de sécurité et de prévention des abus.</li>
           <li>Tu peux retirer ton consentement lorsque le traitement repose dessus, par exemple pour l'autorisation facultative de localisation.</li>
           <li>Tu peux nous contacter si tu as des questions sur l'utilisation de tes données.</li>
+          <li>Tu peux déposer une plainte auprès de la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>), l'autorité française de protection des données.</li>
         </ul>
       </section>
       <section id="fr-retention">
@@ -416,8 +473,7 @@
       </section>
       <section id="fr-age">
         <h2>Conditions d'âge</h2>
-        <p>Connect n'est pas destiné aux enfants en dessous de l'âge minimum fixé par la loi applicable.</p>
-        <p>Dans l'Union européenne, Connect est destiné aux utilisateurs d'au moins 15 ans, sauf si une autre règle s'applique dans ton pays ou si un consentement parental valable est exigé par la loi.</p>
+        <p>Connect est réservé aux adultes de 18 ans et plus.</p>
         <ul>
           <li>Si nous apprenons qu'un compte a été créé par une personne n'ayant pas l'âge requis, nous pouvons fermer ce compte et supprimer les informations associées.</li>
           <li>Nous pouvons prendre des mesures raisonnables pour traiter les signalements liés à l'âge, dans le respect de la vie privée.</li>
@@ -426,6 +482,7 @@
       <section id="fr-transfers">
         <h2>Transferts internationaux</h2>
         <p>Connect peut faire appel à des prestataires ou à une infrastructure situés dans différents pays. Quand des données personnelles sont transférées à l'international, nous utilisons les garanties exigées par la loi applicable, comme des protections contractuelles adaptées lorsque c'est nécessaire.</p>
+        <p>Certains prestataires, comme Google, Apple, Groq, SambaNova et OpenRouter, sont basés aux États-Unis. Ces transferts reposent sur le cadre de protection des données UE-États-Unis (Data Privacy Framework) quand le prestataire est certifié, ou sur les clauses contractuelles types de la Commission européenne.</p>
       </section>
       <section id="fr-third">
         <h2>Liens et contenus tiers</h2>
@@ -452,6 +509,7 @@
       </section>
       <section id="fr-contact">
         <h2>Contact</h2>
+        <p>Connect est géré depuis la France par son fondateur, responsable de tes données personnelles (le « responsable du traitement »).</p>
         <p>Si tu as des questions sur cette politique ou si tu veux faire une demande liée à tes données, contacte-nous depuis Réglages &rarr; Aide &rarr; Signaler un problème en indiquant « Confidentialité » dans ton message.</p>
         <p>Tu peux aussi nous écrire à : <a href="mailto:connectappfr@gmail.com">connectappfr@gmail.com</a>.</p>
       </section>
