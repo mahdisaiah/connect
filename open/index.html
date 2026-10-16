@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Connect, For Real</title>
 <meta name="description" content="Someone shared this with you on Connect. Open it in the app, or get Connect on the App Store.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#F3F3F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
 <meta name="robots" content="noindex">
 <meta property="og:site_name" content="Connect, For Real">
 <meta property="og:title" content="See this on Connect">
@@ -14,120 +15,28 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="apple-itunes-app" content="app-id=6782110379">
-<link rel="icon" href="../images/logo.png" type="image/png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #0b0b0c;
-    --muted: #6b6b6b;
-    --paper: #ffffff;
-    --ground: #f2f2f2;
-    --line: rgba(0, 0, 0, 0.20);
-    --solid: #0b0b0c;
-    --on-solid: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink: #f2f2f2;
-      --muted: #9a9a9a;
-      --paper: #141414;
-      --ground: #000000;
-      --line: rgba(255, 255, 255, 0.20);
-      --solid: #f2f2f2;
-      --on-solid: #0b0b0c;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
-    background: var(--ground);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-  .card {
-    width: 100%;
-    max-width: 400px;
-    background: var(--paper);
-    border: 1.2px solid var(--line);
-    border-radius: 24px;
-    padding: 32px 24px 24px;
-    text-align: center;
-  }
-  .wordmark {
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 0.2px;
-    color: var(--ink);
-    margin: 0 0 26px;
-  }
-  .kind {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0 0 8px;
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.4px;
-    line-height: 1.25;
-    margin: 0 0 10px;
-    overflow-wrap: anywhere;
-  }
-  .lead { margin: 0 0 26px; color: var(--muted); font-size: 15.5px; }
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    width: 100%;
-    min-height: 54px;
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
-    border: 1.2px solid var(--line);
-    color: var(--ink);
-    background: transparent;
-  }
-  .btn + .btn { margin-top: 10px; }
-  .btn.primary { background: var(--solid); border-color: var(--solid); color: var(--on-solid); }
-  .btn svg { width: 18px; height: 18px; flex: none; }
-  .hint { margin: 18px 0 0; font-size: 13.5px; color: var(--muted); }
-  .hint[hidden] { display: none; }
-  footer { margin-top: 22px; font-size: 12.5px; color: var(--muted); }
-  footer a { color: inherit; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/connect.css">
 </head>
 <body>
-<main class="card">
-  <p class="wordmark">Connect.</p>
-  <p class="kind" id="kind">Connect</p>
-  <h1 id="title">Someone shared this with you</h1>
-  <p class="lead" id="lead">See it in the Connect app.</p>
-
-  <a class="btn primary" id="open" href="connect://">
-    <span id="openLabel">Open in Connect</span>
-  </a>
-  <a class="btn" id="store" href="https://apps.apple.com/app/id6782110379">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.27 1.88-3.32-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.33-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
-    <span id="storeLabel">Get Connect on the App Store</span>
-  </a>
-  <p class="hint" id="hint">New to Connect? Get the app, sign in, then open this link again.</p>
-  <p class="hint" id="android" hidden>Connect for Android is coming soon on Google Play.</p>
+<main class="share">
+  <div class="share__card">
+    <a class="share__wm" href="https://getconnectapp.github.io/" aria-label="Connect"><svg viewBox="0 0 4150.5 856"><use href="../assets/sprite.svg#wm"/></svg></a>
+    <p class="label share__kind" id="kind">Connect</p>
+    <h1 id="title">Someone shared this with you</h1>
+    <p class="share__lead" id="lead">See it in the Connect app.</p>
+    <div class="share__acts">
+      <a class="btn btn--ink" id="open" href="connect://"><span id="openLabel">Open in Connect</span></a>
+      <a class="badge" id="store" href="https://apps.apple.com/app/id6782110379"><img data-badge src="../assets/appstore-black-en-us.svg" alt="Download on the App Store" width="156" height="52"></a>
+    </div>
+    <p class="share__hint" id="hint">New to Connect? Get the app, sign in, then open this link again.</p>
+    <p class="share__hint" id="android" hidden>Connect for Android is coming soon on Google Play.</p>
+  </div>
+  <nav class="share__foot" aria-label="Legal"><a href="../privacy.html" id="privacy">Privacy</a><a href="../support.html" id="support">Support</a></nav>
 </main>
 
 <script>
@@ -166,7 +75,7 @@
     hint: "New to Connect? Get the app, sign in, then open this link again.",
     android: "Connect for Android is coming soon on Google Play."
   };
-  if (fr) document.documentElement.lang = "fr";
+  document.documentElement.lang = fr ? "fr" : "en";
 
   var q = new URLSearchParams(location.search);
   var username = (q.get("u") || "").replace(/^@/, "").trim();
@@ -198,10 +107,9 @@
   }
 
   $("openLabel").textContent = text.open;
-  $("storeLabel").textContent = text.store;
   $("hint").textContent = text.hint;
   $("android").textContent = text.android;
-  document.title = $("title").textContent + " · Connect";
+  document.title = $("title").textContent;
 
   if (deep) {
     $("open").setAttribute("href", deep);
@@ -213,14 +121,25 @@
   if (isAndroid) {
     if (PLAY_LIVE) {
       $("store").setAttribute("href", PLAY_URL);
-      $("storeLabel").textContent = text.play;
-      $("store").querySelector("svg").remove();
+      $("store").className = "btn btn--lg";
+      $("store").textContent = text.play;
     } else {
       $("store").remove();
       $("hint").hidden = true;
       $("android").hidden = false;
     }
   }
+  var dark = window.matchMedia("(prefers-color-scheme: dark)");
+  function badge() {
+    var img = document.querySelector("[data-badge]");
+    if (!img) return;
+    img.src = "../assets/appstore-" + (dark.matches ? "white" : "black") + "-" + (fr ? "fr-fr" : "en-us") + ".svg";
+    img.alt = text.store;
+  }
+  badge();
+  if (dark.addEventListener) dark.addEventListener("change", badge);
+  $("privacy").textContent = fr ? "Confidentialité" : "Privacy";
+  $("support").textContent = fr ? "Aide" : "Support";
 })();
 </script>
 </body>
